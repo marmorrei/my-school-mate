@@ -1,5 +1,12 @@
-import './App.css'
+import Header from './components/Header/Header';
+import Home from './pages/Home/Home';
+import './App.css';
 
-export default function App () {
-  return <div>My School Mate</div>
+export default function App() {
+  return (
+    <>
+      <Header />
+      <Home />
+    </>
+  );
 }
