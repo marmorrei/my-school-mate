@@ -1,11 +1,11 @@
-import Header from './components/Header/Header';
+import NavBar from './components/NavBar/NavBar';
 import Home from './pages/Home/Home';
 import './App.css';
 
 export default function App() {
   return (
     <>
-      <Header />
+      <NavBar />
       <Home />
     </>
   );
