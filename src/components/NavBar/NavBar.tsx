@@ -1,4 +1,4 @@
-const NavBar = () => {
+const NavBar = (): JSX.Element => {
   return (
     <div className='navbar bg-neutral/20 h-20 lg:h-16'>
       <div className='navbar-start flex'>
