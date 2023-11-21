@@ -1,5 +1,16 @@
-import './App.css'
+import NavBar from './components/NavBar/NavBar';
+import Home from './pages/Home/Home';
+import './App.css';
+import EvidenceCollectionForm from './components/EvidenceCollectionForm/EvidenceCollectionForm';
 
-export default function App () {
-  return <div>My School Mate</div>
-}
+const App = (): JSX.Element => {
+  return (
+    <>
+      <NavBar />
+      <EvidenceCollectionForm />
+      <Home />
+    </>
+  );
+};
+
+export default App;
