@@ -1,7 +1,7 @@
-const Home = () => {
+const Home = (): JSX.Element => {
   return (
     <main>
-      <div className="hero min-h-screen bg-[url('/assets/images/blob3.svg')]">
+      <div className="hero min-h-screen max-w-screen bg-[url('/assets/images/blob3.svg')]">
         <div className='hero-content flex-col lg:flex-row-reverse'>
           <img
             src='/assets/images/teaching.svg'

@@ -1,6 +1,6 @@
 const NavBar = (): JSX.Element => {
   return (
-    <div className='navbar bg-neutral/20 h-20 lg:h-16'>
+    <div className='navbar bg-neutral/20 h-20 w-screen lg:h-16'>
       <div className='navbar-start flex'>
         <a className='btn btn-ghost'>
           <img
