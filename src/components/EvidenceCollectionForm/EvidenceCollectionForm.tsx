@@ -9,11 +9,15 @@ const EvidenceCollectionForm = (): JSX.Element => {
       {/* Open the modal using document.getElementById('ID').showModal() method */}
       <button
         className='btn btn-sm btn-info border-2 border-primary text-primary'
-        onClick={() => document.getElementById('my_modal_5').showModal()}
+        onClick={() =>
+          (
+            document?.getElementById('ev-collection') as HTMLFormElement
+          ).showModal()
+        }
       >
         Learning evidence
       </button>
-      <dialog id='my_modal_5' className='modal w-screen'>
+      <dialog id='ev-collection' className='modal w-screen'>
         <div className='modal-box w-11/12 max-w-5xl max-h-screen border-2 border-primary'>
           <h3 className='font-bold text-lg'>
             <span className='text-secondary'>Learning </span>
