@@ -1,6 +1,6 @@
 const NavBar = (): JSX.Element => {
   return (
-    <div className='navbar bg-neutral/20 h-20 w-screen lg:h-16'>
+    <div className='navbar bg-neutral/20 border-b-2 border-secondary h-20 lg:h-16'>
       <div className='navbar-start flex'>
         <a className='btn btn-ghost'>
           <img
@@ -105,10 +105,14 @@ const NavBar = (): JSX.Element => {
         </div>
         <ul className='menu menu-horizontal px-1 hidden lg:flex lg:space-x-2'>
           <li>
-            <a className='btn btn-sm'>Login</a>
+            <button className='btn btn-sm btn-info border-2 border-primary text-primary hover:border-info hover:bg-transparent'>
+              Login
+            </button>
           </li>
           <li>
-            <a className='btn btn-sm'>Register</a>
+            <button className='btn btn-sm btn-neutral border-2 border-primary text-primary hover:border-neutral hover:bg-transparent'>
+              Register
+            </button>
           </li>
         </ul>
       </div>
