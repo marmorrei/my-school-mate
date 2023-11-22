@@ -8,7 +8,8 @@ const EvidenceCollectionForm = (): JSX.Element => {
     <>
       {/* Open the modal using document.getElementById('ID').showModal() method */}
       <button
-        className='btn btn-sm btn-info border-2 border-primary text-primary'
+        className='btn btn-sm btn-info border-2 border-primary text-primary hover:border-info 
+        hover:bg-transparent'
         onClick={() =>
           (
             document?.getElementById('ev-collection') as HTMLFormElement
@@ -81,7 +82,10 @@ const EvidenceCollectionForm = (): JSX.Element => {
                   <FileUpload />
                   {/* COMMENTS AREA */}
                   <Comments />
-                  <button className='btn btn-sm btn-neutral border-2 border-primary text-primary self-end'>
+                  <button
+                    className='btn btn-sm btn-neutral border-2 border-primary text-primary 
+                    hover:border-neutral hover:bg-transparent self-end'
+                  >
                     Save
                   </button>
                 </div>
