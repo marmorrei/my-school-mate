@@ -1,5 +1,7 @@
+import SiteUnderConstruction from '../SiteUnderConstruction/SiteUnderConstruction';
+
 const LearningSituations = (): JSX.Element => {
-  return <div>Learning Situations</div>;
+  return <SiteUnderConstruction />;
 };
 
 export default LearningSituations;

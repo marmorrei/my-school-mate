@@ -1,5 +1,7 @@
+import SiteUnderConstruction from '../SiteUnderConstruction/SiteUnderConstruction';
+
 const Students = (): JSX.Element => {
-  return <div>Students</div>;
+  return <SiteUnderConstruction />;
 };
 
 export default Students;

@@ -15,8 +15,9 @@ const TeacherTabs = (): JSX.Element => {
         type='radio'
         name='my_tabs_2'
         role='tab'
-        className='tab'
+        className='tab w-max'
         aria-label='Dashboard'
+        defaultChecked
       />
       <div
         role='tabpanel'
@@ -29,9 +30,8 @@ const TeacherTabs = (): JSX.Element => {
         type='radio'
         name='my_tabs_2'
         role='tab'
-        className='tab'
+        className='tab w-max'
         aria-label='Students'
-        checked
       />
       <div
         role='tabpanel'
@@ -44,7 +44,7 @@ const TeacherTabs = (): JSX.Element => {
         type='radio'
         name='my_tabs_2'
         role='tab'
-        className='tab'
+        className='tab w-max'
         aria-label='Timetable/Calendar'
       />
       <div
@@ -58,9 +58,8 @@ const TeacherTabs = (): JSX.Element => {
         type='radio'
         name='my_tabs_2'
         role='tab'
-        className='tab'
+        className='tab w-max'
         aria-label='Learning situations'
-        checked
       />
       <div
         role='tabpanel'
@@ -73,9 +72,8 @@ const TeacherTabs = (): JSX.Element => {
         type='radio'
         name='my_tabs_2'
         role='tab'
-        className='tab'
+        className='tab w-max'
         aria-label='Evaluation'
-        checked
       />
       <div
         role='tabpanel'
@@ -88,9 +86,8 @@ const TeacherTabs = (): JSX.Element => {
         type='radio'
         name='my_tabs_2'
         role='tab'
-        className='tab'
+        className='tab w-max'
         aria-label='Communication'
-        checked
       />
       <div
         role='tabpanel'
@@ -103,9 +100,8 @@ const TeacherTabs = (): JSX.Element => {
         type='radio'
         name='my_tabs_2'
         role='tab'
-        className='tab'
+        className='tab w-max'
         aria-label='Documentation'
-        checked
       />
       <div
         role='tabpanel'
@@ -118,9 +114,8 @@ const TeacherTabs = (): JSX.Element => {
         type='radio'
         name='my_tabs_2'
         role='tab'
-        className='tab'
+        className='tab w-max'
         aria-label='Settings'
-        checked
       />
       <div
         role='tabpanel'
