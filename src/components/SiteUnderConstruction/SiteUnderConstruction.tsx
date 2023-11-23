@@ -3,7 +3,8 @@ const SiteUnderConstruction = (): JSX.Element => {
     <div className='hero h-max rounded-lg bg-neutral/20'>
       <div className='hero-content flex-col lg:flex-row'>
         <img
-          src='/public/assets/images/my-school-mate-logo.svg'
+          src='/assets/images/my-school-mate-logo.svg'
+          alt='logo'
           className='max-w-xs rounded-lg shadow-2xl'
         />
         <div>
