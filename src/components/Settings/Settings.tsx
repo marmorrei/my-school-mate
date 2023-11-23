@@ -1,5 +1,7 @@
+import SiteUnderConstruction from '../SiteUnderConstruction/SiteUnderConstruction';
+
 const Settings = (): JSX.Element => {
-  return <div>Settings</div>;
+  return <SiteUnderConstruction />;
 };
 
 export default Settings;

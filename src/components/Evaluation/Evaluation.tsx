@@ -1,5 +1,7 @@
+import SiteUnderConstruction from '../SiteUnderConstruction/SiteUnderConstruction';
+
 const Evaluation = (): JSX.Element => {
-  return <div>Evaluation</div>;
+  return <SiteUnderConstruction />;
 };
 
 export default Evaluation;

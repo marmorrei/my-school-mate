@@ -4,6 +4,8 @@ import SearchStudent from '../SearchStudent/SearchStudent';
 import Select from '../Select/Select';
 
 const EvidenceCollectionForm = (): JSX.Element => {
+  const options: string[] = ['Option 1', 'Option 2', 'Option 3'];
+
   return (
     <>
       {/* Open the modal using document.getElementById('ID').showModal() method */}
@@ -60,20 +62,34 @@ const EvidenceCollectionForm = (): JSX.Element => {
                     <SearchStudent />
                   </div>
                   {/* SUBJECT AREA */}
-                  <Select label='Subject area' id='subject-area' />
+                  <Select
+                    label='Subject area'
+                    id='subject-area'
+                    options={options}
+                  />
                   {/* LEARNING SITUATION */}
-                  <Select label='Learning situation' id='learning-situation' />
+                  <Select
+                    label='Learning situation'
+                    id='learning-situation'
+                    options={options}
+                  />
                   {/* KEY COMPETENCE */}
-                  <Select label='Key competence' id='key-competence' />
+                  <Select
+                    label='Key competence'
+                    id='key-competence'
+                    options={options}
+                  />
                   {/* SPECIFIC COMPETENCE */}
                   <Select
                     label='Specific competence'
                     id='specific-competence'
+                    options={options}
                   />
                   {/* ASSESSMENT CRITERIA */}
                   <Select
                     label='Assessment criteria'
                     id='assessment-criteria'
+                    options={options}
                   />
                 </div>
                 <div className='form-data-collection flex flex-col space-y-3 md:w-2/4'>

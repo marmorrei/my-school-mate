@@ -1,5 +1,7 @@
+import SiteUnderConstruction from '../SiteUnderConstruction/SiteUnderConstruction';
+
 const TimetableCalendar = (): JSX.Element => {
-  return <div>Timetable/Calendar</div>;
+  return <SiteUnderConstruction />;
 };
 
 export default TimetableCalendar;

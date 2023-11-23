@@ -1,5 +1,7 @@
+import SiteUnderConstruction from '../SiteUnderConstruction/SiteUnderConstruction';
+
 const Communication = (): JSX.Element => {
-  return <div>Communication</div>;
+  return <SiteUnderConstruction />;
 };
 
 export default Communication;
