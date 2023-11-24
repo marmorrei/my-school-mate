@@ -11,7 +11,7 @@ const Select = ({ label, id, options }: SelectProps): JSX.Element => {
       </label>
       <select
         id={id}
-        className='select select-primary select-sm m-0 bg-neutral/20 w-full md:w-2/4 lg:w-3/5 text-secondary'
+        className='select select-primary select-sm border-none m-0 bg-neutral/20 w-full md:w-2/4 lg:w-3/5 text-secondary'
         defaultValue={'Choose option'}
       >
         <option disabled>Choose option</option>
