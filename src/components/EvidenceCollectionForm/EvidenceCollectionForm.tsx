@@ -56,11 +56,12 @@ const EvidenceCollectionForm = (): JSX.Element => {
                         <p className='text-primary text-xs font-bold'>
                           {selectedStudent !== null
                             ? `${selectedStudent.name} ${selectedStudent.surname}`
-                            : 'Student`s name'}
+                            : 'Student´s name'}
                         </p>
                         <p className='text-primary text-xs font-bold'>
-                          Primary
-                          {selectedStudent?.course}
+                          {selectedStudent !== null
+                            ? selectedStudent.course
+                            : 'and course'}
                         </p>
                       </div>
                     </div>
