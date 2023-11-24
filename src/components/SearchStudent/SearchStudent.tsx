@@ -59,7 +59,7 @@ const SearchStudent = (): JSX.Element => {
   ));
 
   return (
-    <div className='flex flex-col items-center w-full space-y-1.5 md:w-2/4 lg:w-3/5'>
+    <div className='flex flex-col items-center w-full m-0 space-y-1.5 md:w-2/4'>
       <input
         type='search'
         placeholder='Search student'
@@ -67,10 +67,10 @@ const SearchStudent = (): JSX.Element => {
         onChange={e => {
           handleChange(e.target.value);
         }}
-        className='input input-bordered input-primary input-sm bg-neutral/20 w-full text-primary'
+        className='input border-none input-primary input-sm bg-neutral/20 w-full text-primary max-w-xs'
       />
       {results !== undefined && (
-        <ul className='bg-neutral/20 w-full text-secondary cursor-default rounded-md overflow-y-scroll'>
+        <ul className='bg-neutral/20 w-full text-secondary cursor-default rounded-md overflow-y-scroll md:w-4/5 lg:w-2/3'>
           {displayResults}
         </ul>
       )}
