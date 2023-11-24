@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { MemoizedApp } from './App.tsx';
+import App from './App.tsx';
 import { EvidenceCollectionProvider } from './context/EvidenceCollectionProvider.tsx';
 import './index.css';
 
@@ -10,7 +10,7 @@ root !== null &&
   ReactDOM.createRoot(root).render(
     <React.StrictMode>
       <EvidenceCollectionProvider>
-        <MemoizedApp />
+        <App />
       </EvidenceCollectionProvider>
     </React.StrictMode>,
   );
