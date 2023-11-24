@@ -37,12 +37,6 @@ const SearchStudent = (): JSX.Element => {
       });
   };
 
-  // key={starship.name}
-  //     onClick={() => {
-  //       setDisplayModal(true);
-  //       setSelectedStarship(starship);
-  //     }}
-
   const displayResults = results?.map(result => (
     <li
       key={result.id}
@@ -51,6 +45,7 @@ const SearchStudent = (): JSX.Element => {
         setResults(undefined);
         setInput('');
       }}
+      onKeyDown={this?.handleKeyDown}
     >
       {result.name} {result.surname}
     </li>
