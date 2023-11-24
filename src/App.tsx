@@ -2,8 +2,9 @@ import NavBar from './components/NavBar/NavBar';
 // import Home from './pages/Home/Home';
 import './App.css';
 import TeacherTabs from './pages/TeacherTabs/TeacherTabs';
+import { memo } from 'react';
 
-const App = (): JSX.Element => {
+export const App = (): JSX.Element => {
   return (
     <>
       <NavBar />
@@ -13,4 +14,4 @@ const App = (): JSX.Element => {
   );
 };
 
-export default App;
+export const MemoizedApp = memo(App);
