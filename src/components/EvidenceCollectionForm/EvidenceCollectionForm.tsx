@@ -2,9 +2,11 @@ import Comments from '../Comments/Comments';
 import FileUpload from '../FileUpload/FileUpload';
 import SearchStudent from '../SearchStudent/SearchStudent';
 import Select from '../Select/Select';
+import { useStudentContext } from '../../context/EvidenceCollectionProvider';
 
 const EvidenceCollectionForm = (): JSX.Element => {
   const options: string[] = ['Option 1', 'Option 2', 'Option 3'];
+  const { selectedStudent } = useStudentContext();
 
   return (
     <>
@@ -52,10 +54,13 @@ const EvidenceCollectionForm = (): JSX.Element => {
                       </div>
                       <div className='name-course flex flex-col'>
                         <p className='text-primary text-xs font-bold'>
-                          Henry Williams
+                          {selectedStudent !== null
+                            ? `${selectedStudent.name} ${selectedStudent.surname}`
+                            : 'Student`s name'}
                         </p>
                         <p className='text-primary text-xs font-bold'>
-                          Primary 3A
+                          Primary
+                          {selectedStudent?.course}
                         </p>
                       </div>
                     </div>
