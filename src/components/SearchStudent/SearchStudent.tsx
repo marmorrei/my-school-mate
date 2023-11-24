@@ -45,7 +45,13 @@ const SearchStudent = (): JSX.Element => {
         setResults(undefined);
         setInput('');
       }}
-      onKeyDown={this?.handleKeyDown}
+      onKeyDown={e => {
+        if (e.key === 'Enter') {
+          updateStudent(result);
+          setResults(undefined);
+          setInput('');
+        }
+      }}
     >
       {result.name} {result.surname}
     </li>
