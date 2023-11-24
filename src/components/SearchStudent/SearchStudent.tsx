@@ -26,8 +26,8 @@ const SearchStudent = (): JSX.Element => {
           (item: { name: string; surname: string }) =>
             value !== undefined &&
             item !== undefined &&
-            (item.name.toLowerCase().includes(value) ||
-              item.surname.toLowerCase().includes(value)),
+            (item.name.toLowerCase().includes(value.toLowerCase()) ||
+              item.surname.toLowerCase().includes(value.toLowerCase())),
         );
         setResults(foundStudents);
         console.log('foundStudents', foundStudents);
@@ -39,6 +39,7 @@ const SearchStudent = (): JSX.Element => {
 
   const displayResults = results?.map(result => (
     <li
+      className='px-2.5 text-md md:text-sm hover:bg-neutral rounded-md'
       key={result.id}
       onClick={() => {
         updateStudent(result);
@@ -58,22 +59,22 @@ const SearchStudent = (): JSX.Element => {
   ));
 
   return (
-    <>
-      <div className='flex justify-end items-center w-full md:w-2/4 lg:w-3/5'>
-        <input
-          type='search'
-          placeholder='Search student'
-          value={input}
-          onChange={e => {
-            handleChange(e.target.value);
-          }}
-          className='input input-bordered input-primary input-sm bg-neutral/20 w-full text-primary'
-        />
-      </div>
-      <ul className='menu menu-xs bg-base-200 w-56 rounded-box'>
-        {displayResults}
-      </ul>
-    </>
+    <div className='flex flex-col items-center w-full space-y-1.5 md:w-2/4 lg:w-3/5'>
+      <input
+        type='search'
+        placeholder='Search student'
+        value={input}
+        onChange={e => {
+          handleChange(e.target.value);
+        }}
+        className='input input-bordered input-primary input-sm bg-neutral/20 w-full text-primary'
+      />
+      {results !== undefined && (
+        <ul className='bg-neutral/20 w-full text-secondary cursor-default rounded-md overflow-y-scroll'>
+          {displayResults}
+        </ul>
+      )}
+    </div>
   );
 };
 
