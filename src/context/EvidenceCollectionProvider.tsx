@@ -1,51 +1,122 @@
 import { useState, useContext, createContext } from 'react';
 import {
-  StudentContextType,
-  SubjectAreaContextType,
-  LearningSituationContextType,
-  KeyCompetenceContextType,
+  type Props,
+  type StudentType,
+  type StudentContextType,
+  type SubjectAreaType,
+  type SubjectAreaContextType,
+  type LearningSituationType,
+  type LearningSituationContextType,
+  type KeyCompetenceType,
+  type KeyCompetenceContextType,
 } from '../types/types';
 
-const studentContext = createContext<StudentContextType | null>(null);
-const subjectAreaContext = createContext<SubjectAreaContextType | null>(null);
-const learningSituationContext =
-  createContext<LearningSituationContextType | null>(null);
-const keyCompetenceContext = createContext<KeyCompetenceContextType | null>(
-  null,
+// CREATE CONTEXTS
+const StudentContext = createContext<StudentContextType>(
+  {} as StudentContextType,
 );
 
-export const useStudentContext = () => useContext(studentContext);
-export const useSubjectAreaContext = () => useContext(subjectAreaContext);
-export const useLearningSituationContext = () =>
-  useContext(learningSituationContext);
-export const useKeyCompetenceContext = () => useContext(keyCompetenceContext);
+const SubjectAreaContext = createContext<SubjectAreaContextType>(
+  {} as SubjectAreaContextType,
+);
 
-export const EvidenceCollectionProvider = ({
-  children,
-}: {
-  children: any;
-}): JSX.Element => {
-  const [selectedStudent, setSelectedStudent] = useState(null);
-  const [selectedSubjectArea, setSelectedSubjectArea] = useState(null);
+const LearningSituationContext = createContext<LearningSituationContextType>(
+  {} as LearningSituationContextType,
+);
+
+const KeyCompetenceContext = createContext<KeyCompetenceContextType>(
+  {} as KeyCompetenceContextType,
+);
+
+// CUSTOM HOOKS
+export const useStudentContext = (): StudentContextType => {
+  const studentContext = useContext(StudentContext);
+  if (studentContext === undefined)
+    throw new Error(
+      'useStudentContext must be used within a EvidenceCollectionProvider',
+    );
+  return studentContext;
+};
+
+export const useSubjectAreaContext = (): SubjectAreaContextType => {
+  const subjectAreaContext = useContext(SubjectAreaContext);
+  if (subjectAreaContext === undefined)
+    throw new Error(
+      'useSubjectAreaContext must be used within a EvidenceCollectionProvider',
+    );
+  return subjectAreaContext;
+};
+
+export const useLearningSituationContext = (): LearningSituationContextType => {
+  const learningSituationContext = useContext(LearningSituationContext);
+  if (learningSituationContext === undefined)
+    throw new Error(
+      'useLearningSituationContext must be used within a EvidenceCollectionProvider',
+    );
+  return learningSituationContext;
+};
+
+export const useKeyCompetenceContext = (): KeyCompetenceContextType => {
+  const keyCompetenceContext = useContext(KeyCompetenceContext);
+  if (keyCompetenceContext === undefined)
+    throw new Error(
+      'useKeyCompetenceContext must be used within a EvidenceCollectionProvider',
+    );
+  return keyCompetenceContext;
+};
+
+// CONTEXT PROVIDER
+export const EvidenceCollectionProvider = (props: Props): JSX.Element => {
+  // useState
+  const [selectedStudent, setSelectedStudent] = useState<StudentType>(null);
+
+  const [selectedSubjectArea, setSelectedSubjectArea] =
+    useState<SubjectAreaType>(null);
+
   const [selectedLearningSituation, setSelectedLearningSituation] =
-    useState(null);
-  const [selectedKeyCompetence, setSelectedKeyCompetence] = useState(null);
+    useState<LearningSituationType>(null);
+
+  const [selectedKeyCompetence, setSelectedKeyCompetence] =
+    useState<KeyCompetenceType>(null);
+
+  // update states
+  const updateStudent = (newStudent: StudentType): void => {
+    setSelectedStudent(newStudent);
+  };
+
+  const updateSubjectArea = (newSubjectArea: SubjectAreaType): void => {
+    setSelectedSubjectArea(newSubjectArea);
+  };
+
+  const updateLearningSituation = (
+    newLearningSituation: LearningSituationType,
+  ): void => {
+    setSelectedLearningSituation(newLearningSituation);
+  };
+
+  const updateKeyCompetence = (newKeyCompetence: KeyCompetenceType): void => {
+    setSelectedKeyCompetence(newKeyCompetence);
+  };
 
   return (
-    <studentContext.Provider value={[selectedStudent, setSelectedStudent]}>
-      <subjectAreaContext.Provider
-        value={[selectedSubjectArea, setSelectedSubjectArea]}
+    <StudentContext.Provider
+      value={{ selectedStudent, updateStudent }}
+      {...props}
+    >
+      <SubjectAreaContext.Provider
+        value={{ selectedSubjectArea, updateSubjectArea }}
+        {...props}
       >
-        <learningSituationContext.Provider
-          value={[selectedLearningSituation, setSelectedLearningSituation]}
+        <LearningSituationContext.Provider
+          value={{ selectedLearningSituation, updateLearningSituation }}
+          {...props}
         >
-          <keyCompetenceContext.Provider
-            value={[selectedKeyCompetence, setSelectedKeyCompetence]}
-          >
-            {children}
-          </keyCompetenceContext.Provider>
-        </learningSituationContext.Provider>
-      </subjectAreaContext.Provider>
-    </studentContext.Provider>
+          <KeyCompetenceContext.Provider
+            value={{ selectedKeyCompetence, updateKeyCompetence }}
+            {...props}
+          ></KeyCompetenceContext.Provider>
+        </LearningSituationContext.Provider>
+      </SubjectAreaContext.Provider>
+    </StudentContext.Provider>
   );
 };
