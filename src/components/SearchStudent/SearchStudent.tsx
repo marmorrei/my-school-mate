@@ -26,8 +26,8 @@ const SearchStudent = (): JSX.Element => {
           (item: { name: string; surname: string }) =>
             value !== undefined &&
             item !== undefined &&
-            (item.name.toLowerCase().includes(value) ||
-              item.surname.toLowerCase().includes(value)),
+            (item.name.toLowerCase().includes(value.toLowerCase()) ||
+              item.surname.toLowerCase().includes(value.toLowerCase())),
         );
         setResults(foundStudents);
         console.log('foundStudents', foundStudents);
