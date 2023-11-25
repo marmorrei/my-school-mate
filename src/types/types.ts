@@ -55,3 +55,15 @@ export type KeyCompetenceContextType = {
   selectedKeyCompetence: KeyCompetenceType;
   updateKeyCompetence: (newKeyCompetence: KeyCompetenceType) => void;
 };
+
+export type UserType = {
+  name: string;
+  surnames: string;
+  email: string;
+  password: string;
+} | null;
+
+export type UserContextType = {
+  userData: UserType;
+  updateUserData: (newUserData: UserType) => void;
+};
