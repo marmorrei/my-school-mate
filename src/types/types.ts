@@ -67,9 +67,7 @@ export type UserContextType = {
   updateUserData: (newUserData: UserType) => void;
 };
 
-export type LoginType = boolean;
-
 export type LoginContextType = {
-  isLogged: LoginType;
-  updateLoginState: (newLoginState: LoginType) => void;
+  isLogged: boolean;
+  updateLoginState: (newLoginState: boolean) => void;
 };

@@ -3,7 +3,6 @@ import {
   type Props,
   type UserType,
   type UserContextType,
-  type LoginType,
   type LoginContextType,
 } from '../types/types';
 
@@ -31,14 +30,14 @@ export const useLoginContext = (): LoginContextType => {
 export const UserProvider = (props: Props): JSX.Element => {
   // useState
   const [userData, setUserData] = useState<UserType>(null);
-  const [isLogged, setIsLogged] = useState<LoginType>(false);
+  const [isLogged, setIsLogged] = useState<boolean>(false);
 
   // update states
   const updateUserData = (newUserData: UserType): void => {
     setUserData(newUserData);
   };
 
-  const updateLoginState = (newLoginState: LoginType): void => {
+  const updateLoginState = (newLoginState: boolean): void => {
     setIsLogged(newLoginState);
   };
 
