@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 const NavBar = (): JSX.Element => {
   return (
-    <div className='navbar bg-[#F2F7F8] border-b-2 border-secondary h-20 lg:h-16 lg:fixed lg:z-40 '>
+    <div className='navbar bg-[#F2F7F8] border-b-2 border-secondary h-20 lg:h-16'>
       <div className='navbar-start flex'>
         <NavLink to='/' className='btn btn-ghost'>
           <img
