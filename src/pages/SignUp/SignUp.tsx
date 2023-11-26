@@ -34,21 +34,32 @@ const SignUp = (): JSX.Element => {
     e.preventDefault();
 
     try {
-      const { error } = await supabase.auth.signUp({
+      const { data, error } = await supabase.auth.signUp({
         email: formData.email,
         password: formData.password,
-        options: {
-          data: {
-            name: formData.name,
-            surname: formData.surname,
-          },
-        },
       });
       if (error != null) throw new Error();
+
+      try {
+        const { error } = await supabase
+          .from('profiles')
+          .insert([
+            {
+              user_id: data.user?.id,
+              name: formData.name,
+              surname: formData.surname,
+            },
+          ])
+          .select();
+        if (error != null) throw new Error();
+      } catch (error) {
+        console.log(error);
+      }
     } catch (error) {
       console.log(error);
+    } finally {
+      resetData();
     }
-    resetData();
   };
 
   return (

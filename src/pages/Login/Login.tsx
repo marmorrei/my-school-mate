@@ -37,8 +37,9 @@ const Login = (): JSX.Element => {
       if (error != null) throw new Error();
     } catch (error) {
       console.log(error);
+    } finally {
+      resetData();
     }
-    resetData();
   };
 
   return (
