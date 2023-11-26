@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useStudentContext } from '../../context/EvidenceCollectionProvider';
-import { fetchStudents } from '../../utils/fetchs/fetchStudents';
+import { fetchStudents } from '../../utils/api/fetchStudents';
 
 const SearchStudent = (): JSX.Element => {
   const { updateStudent } = useStudentContext();

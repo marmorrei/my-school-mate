@@ -14,6 +14,7 @@ const App = (): JSX.Element => {
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/teacher' element={<TeacherTabs />} />
+        <Route path='*' element={<div>404 NOT FOUND</div>} />
       </Routes>
     </>
   );

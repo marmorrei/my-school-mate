@@ -22,13 +22,13 @@ export const UserProvider = (props: Props): JSX.Element => {
   const [userData, setUserData] = useState<UserType>(null);
 
   // update states
-  const updateUserData = (newUserData: UserType): void => {
-    setUserData(newUserData);
-  };
+  // const updateUserData = (newUserData: UserType): void => {
+  //   setUserData(newUserData);
+  // };
 
   return (
     <UserContext.Provider
-      value={{ userData, updateUserData }}
+      value={{ userData, setUserData }}
       {...props}
     ></UserContext.Provider>
   );

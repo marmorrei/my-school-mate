@@ -58,12 +58,10 @@ export type KeyCompetenceContextType = {
 
 export type UserType = {
   name: string;
-  surnames: string;
-  email: string;
-  password: string;
+  surname: string;
 } | null;
 
 export type UserContextType = {
   userData: UserType;
-  updateUserData: (newUserData: UserType) => void;
+  setUserData: React.Dispatch<React.SetStateAction<UserType>>;
 };
