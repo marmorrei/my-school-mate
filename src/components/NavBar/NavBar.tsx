@@ -2,25 +2,27 @@ import { NavLink } from 'react-router-dom';
 
 const NavBar = (): JSX.Element => {
   return (
-    <div className='navbar bg-neutral/20 border-b-2 border-secondary h-20 lg:h-16'>
+    <div className='navbar bg-[#F2F7F8] border-b-2 border-secondary h-20 lg:h-16 lg:fixed lg:z-40 '>
       <div className='navbar-start flex'>
-        <NavLink to='/'>
-          <a className='btn btn-ghost'>
-            <img
-              className='max-h-14 lg:max-h-12'
-              src='/assets/images/my-school-mate-logo.svg'
-              alt='MSM-logo'
-            />
-          </a>
+        <NavLink to='/' className='btn btn-ghost'>
+          <img
+            className='max-h-14 lg:max-h-12'
+            src='/assets/images/my-school-mate-logo.svg'
+            alt='MSM-logo'
+          />
         </NavLink>
       </div>
       <div className='navbar-center hidden lg:flex lg:space-x-32'>
         <ul className='menu menu-horizontal px-1'>
           <li>
-            <a>SCHOOLS</a>
+            <a className='text-primary font-bold hover:text-secondary' href='#'>
+              SCHOOLS
+            </a>
           </li>
           <li>
-            <a>FAMILIES</a>
+            <a className='text-primary font-bold hover:text-secondary' href='#'>
+              FAMILIES
+            </a>
           </li>
         </ul>
         <ul className='menu menu-horizontal px-1'>
@@ -64,23 +66,41 @@ const NavBar = (): JSX.Element => {
           </label>
           <ul
             tabIndex={0}
-            className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-40 space-y-3'
+            className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-md bg-white rounded-box w-40 space-y-3'
           >
             <li>
-              <NavLink to='/login' className='btn btn-sm'>
+              <NavLink
+                to='/login'
+                className='btn btn-sm btn-info border-2 border-primary text-primary 
+                            hover:border-info hover:bg-transparent'
+              >
                 Login
               </NavLink>
             </li>
             <li>
-              <NavLink to='/signup' className='btn btn-sm'>
+              <NavLink
+                to='/signup'
+                className='btn btn-sm btn-neutral border-2 border-primary text-primary 
+                            hover:border-neutral hover:bg-transparent'
+              >
                 Register
               </NavLink>
             </li>
             <li className='items-end'>
-              <a>SCHOOLS</a>
+              <a
+                className='text-primary font-bold hover:text-secondary'
+                href='#'
+              >
+                SCHOOLS
+              </a>
             </li>
             <li className='items-end'>
-              <a>FAMILIES</a>
+              <a
+                className='text-primary font-bold hover:text-secondary'
+                href='#'
+              >
+                FAMILIES
+              </a>
             </li>
             <li className='items-end'>
               <a>
@@ -114,14 +134,20 @@ const NavBar = (): JSX.Element => {
         <ul className='menu menu-horizontal px-1 hidden lg:flex lg:space-x-2'>
           <li>
             <NavLink to='/login'>
-              <button className='btn btn-sm btn-info border-2 border-primary text-primary hover:border-info hover:bg-transparent'>
+              <button
+                className='btn btn-sm btn-info border-2 border-primary text-primary 
+                                  hover:border-info hover:bg-transparent'
+              >
                 Login
               </button>
             </NavLink>
           </li>
           <li>
             <NavLink to='/signup'>
-              <button className='btn btn-sm btn-neutral border-2 border-primary text-primary hover:border-neutral hover:bg-transparent'>
+              <button
+                className='btn btn-sm btn-neutral border-2 border-primary text-primary 
+                                  hover:border-neutral hover:bg-transparent'
+              >
                 Register
               </button>
             </NavLink>

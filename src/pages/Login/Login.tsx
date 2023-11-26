@@ -1,12 +1,52 @@
 import { NavLink } from 'react-router-dom';
+import { supabase } from '../../supabase/supabase';
+import { useState } from 'react';
 
 const Login = (): JSX.Element => {
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+  });
+
+  const resetData = (): void => {
+    setFormData({
+      email: '',
+      password: '',
+    });
+  };
+
+  const handleChange = (e: {
+    target: { name: string; value: string };
+  }): void => {
+    setFormData(prevFormData => {
+      return {
+        ...prevFormData,
+        [e.target.name]: e.target.value,
+      };
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent): Promise<void> => {
+    e.preventDefault();
+
+    try {
+      const { error } = await supabase.auth.signInWithPassword({
+        email: formData.email,
+        password: formData.password,
+      });
+      if (error != null) throw new Error();
+    } catch (error) {
+      console.log(error);
+    }
+    resetData();
+  };
+
   return (
     <div className='flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8'>
       <div className='sm:mx-auto sm:w-full sm:max-w-sm'>
         <img
           className='mx-auto h-14 w-auto'
-          src='/public/assets/images/my-school-mate-logo.svg'
+          src='/assets/images/my-school-mate-logo.svg'
           alt='My School Mate'
         />
         <h2 className='mt-10 text-center text-2xl font-bold leading-9 tracking-tight'>
@@ -16,7 +56,12 @@ const Login = (): JSX.Element => {
         </h2>
       </div>
       <div className='mt-10 sm:mx-auto sm:w-full sm:max-w-sm'>
-        <form className='space-y-6' action='#' method='POST'>
+        <form
+          className='space-y-6'
+          onSubmit={handleSubmit}
+          action='#'
+          method='POST'
+        >
           <div>
             <label
               htmlFor='email'
@@ -28,7 +73,9 @@ const Login = (): JSX.Element => {
               <input
                 id='email'
                 name='email'
+                value={formData.email}
                 type='email'
+                onChange={handleChange}
                 autoComplete='email'
                 required
                 className='block input w-full rounded-md border-0 py-1.5 text-primary 
@@ -57,7 +104,9 @@ const Login = (): JSX.Element => {
               <input
                 id='password'
                 name='password'
+                value={formData.password}
                 type='password'
+                onChange={handleChange}
                 autoComplete='current-password'
                 required
                 className='block input w-full rounded-md border-0 py-1.5 text-primary 
