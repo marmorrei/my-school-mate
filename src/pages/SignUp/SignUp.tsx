@@ -51,7 +51,13 @@ const SignUp = (): JSX.Element => {
             },
           ])
           .select();
-        if (error != null) throw new Error();
+        if (error != null) {
+          if (error.message.includes('User already registered')) {
+            alert('This email is already registered in the system!');
+          } else {
+            alert(`Error during login: ${error.message}`);
+          }
+        }
       } catch (error) {
         console.log(error);
       }

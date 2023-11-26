@@ -1,12 +1,14 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useLoginContext } from '../../context/UserProvider';
 import { supabase } from '../../supabase/supabase';
 
 const NavBar = (): JSX.Element => {
   const { isLogged } = useLoginContext();
+  const navigate = useNavigate();
 
   const handleClick = async (): Promise<void> => {
     await supabase.auth.signOut();
+    navigate('/');
   };
 
   return (
