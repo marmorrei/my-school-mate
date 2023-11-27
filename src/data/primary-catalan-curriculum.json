@@ -1,0 +1,102 @@
+{
+  "cycle-1": {
+    "subject-areas": [
+      {
+        "name": "Mathematics",
+        "specific-competences": [
+          {
+            "name": "1. Traduir problemes i interpretar situacions quotidianes fent-ne una representació matemàtica personal a través de conceptes, eines i estratègies per analitzar-ne els elements més rellevants. ",
+            "assessment-criteria": [
+              "1.1 Iniciar-se en la interpretació de la informació d’un problema i d’una situació de la vida quotidiana responent a les preguntes plantejades o fent noves preguntes.",
+              "1.2 Proposar representacions matemàtiques, amb recursos manipulatius, gràfics i digitals, orientades a la resolució de problemes i de situacions de la vida quotidiana."
+            ]
+          },
+          {
+            "name": "2. Resoldre problemes, aplicant diferents tècniques, estratègies i formes de raonament, per explorar i compartir diferents maneres de procedir, obtenir solucions i assegurar la seva validesa des d’un punt de vista formal i en relació amb el context plantejat i generar noves preguntes i reptes.",
+            "assessment-criteria": [
+              "2.1 Emprar estratègies i formes pròpies de raonar per resoldre un problema i explicar el procés.",
+              "2.2 Explorar, compartir i resoldre un mateix problema a partir de diferents propostes, parlant-ne sense biaix de gènere.",
+              "2.3 Comprovar que les solucions obtingudes es corresponen amb la pregunta formulada relacionant les solucions amb la pregunta."
+            ]
+          },
+          {
+            "name": "3. Explorar, formular i comprovar conjectures senzilles, reconeixent el valor del raonament espacial, raonament lògic i incorporar-hi l’argumentació per integrar i generar nou coneixement matemàtic. ",
+            "assessment-criteria": [
+              "3.1 Iniciar-se en la realització de conjectures matemàtiques investigant patrons i propietats, fent deduccions i comprovant-les.",
+              "3.2 Proposar exemples de problemes i situacions i explicant com es poden resoldre matemàticament.",
+              "3.3 Incorporar la utilització de la visualització i del raonament geomètric com a forma de raonament per entendre i gestionar la informació referida a l’espai."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Physical Education",
+        "specific-competences": [
+          {
+            "name": "1. Resoldre situacions motrius diverses de forma eficaç i creativa, articulant capacitats i habilitats motrius per donar resposta a projectes i pràctiques d’activitats físiques de la vida quotidiana.",
+            "assessment-criteria": [
+              "1.1 Experimentar diferents maneres de donar resposta a projectes i pràctiques d’activitats físiques variades individuals i col·lectives, valorant-ne la consecució.",
+              "1.2 Adoptar decisions eficaces en la pràctica d’activitats físiques individuals i de col·laboració amb l’ús d’estratègies conegudes.",
+              "1.3 Emprar capacitats i habilitats motrius pròpies per resoldre situacions motrius millorant progressivament el control corporal."
+            ]
+          },
+          {
+            "name": "2. Desenvolupar un estil de vida actiu i saludable, incorporant la pràctica habitual d’activitats físiques i altres comportaments beneficiosos per a la salut durant la vida quotidiana per adquirir hàbits que contribueixin al benestar físic, mental i social.",
+            "assessment-criteria": [
+              "2.1 Identificar la pràctica habitual d’activitats físiques en la vida quotidiana, la higiene personal, l’educació postural, l’alimentació saludable, la hidratació i el descans com a comportaments beneficiosos per a la salut.",
+              "2.2 Evitar conductes de risc, reconeixent els possibles riscos que poden existir en la pràctica d’activitats físiques a l’escola i a la vida quotidiana."
+            ]
+          },
+          {
+            "name": "3. Prendre part en activitats motrius individuals i col·lectives, de joc i d’expressió i comunicació corporal per integrar-les en el repertori motriu i afavorir les relacions interpersonals.",
+            "assessment-criteria": [
+              "3.1 Participar activament en els jocs i en activitats col·lectives senzilles d’expressió i comunicació corporal pròpies de l’entorn proper gaudint de la seva pràctica, tot afavorint la seva pervivència.",
+              "3.2 Practicar jocs i activitats individuals i col·lectives d’expressió i comunicació corporal tot defugint d’assignar-les a un tipus determinat de persones segons el seu gènere.",
+              "3.3 Comunicar vivències, emocions i idees a través de manifestacions expressives senzilles utilitzant els recursos expressius del propi cos."
+            ]
+          }
+        ]
+      }
+    ],
+    "key-competences": [
+      {
+        "name": "Citizenship competence",
+        "specific-competences": [
+          {
+            "name": "1. Identificar els fets històrics i socials més rellevants relatius a la seva pròpia identitat i cultura, reflexionar sobre les normes de convivència i aplicar-les de manera constructiva, dialogant i inclusiva en qualsevol context.",
+            "assessment-criteria": [
+              "1.1 Registrar canvis importants que s’han produït en l’àmbit personal, familiar, a l’escola o al barri que han influït en la construcció de la pròpia identitat.",
+              "1.2 Identificar la diversitat cultural present a l’aula i al centre educatiu, reconeixent i respectant les diferents expressions culturals.",
+              "1.3 Identificar les necessitats, desitjos, sentiments i valors propis i de les altres persones, així com algunes de les habilitats socials necessàries per a la convivència a l’aula."
+            ]
+          },
+          {
+            "name": "2. Participar en activitats comunitàries, en la presa de decisions i la resolució dels conflictes de forma dialogada i respectuosa amb els procediments democràtics en el marc de la Unió Europea, de l’ordenament jurídic de l’Estat espanyol i Catalunya, dels drets humans i de l’infant, i del valor de la diversitat i l’assoliment de la igualtat de gènere, la cohesió social i els objectius de desenvolupament sostenible",
+            "assessment-criteria": [
+              "2.1 Participar en la presa de decisions col·lectives, tenint en compte les aportacions d’altres membres del grup.",
+              "2.2 Participar en la comunitat escolar (grup classe, cicle…) i en l’entorn social, de manera assertiva i constructiva, utilitzant un llenguatge inclusiu i no violent."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Digital competence",
+        "specific-competences": [
+          {
+            "name": "1. Fer cerques guiades a Internet i usar estratègies senzilles per al tractament digital de la informació (paraules clau, selecció d’informació rellevant, organització de dades, etc.) amb una actitud crítica sobre els continguts que s’obtenen.",
+            "assessment-criteria": [
+              "1.1 Trobar, de manera guiada, dades, informació i continguts a través d’una cerca en entorns digitals, que doni resposta a la necessitat inicial."
+            ]
+          },
+          {
+            "name": "2. Crear, integrar i reelaborar continguts digitals en diferents formats (text, taula, imatge, àudio, vídeo, programa informàtic, etc.) mitjançant l’ús de diferents eines digitals per expressar idees, sentiments i coneixements, respectant la propietat intel·lectual i els drets d’autor dels continguts que es reutilitzen.",
+            "assessment-criteria": [
+              "2.1 Crear i editar documents i presentacions pròpies utilitzant les eines de format (processador de textos i aplicacions) en activitats dirigides pel o per la docent.",
+              "2.2 Crear vídeos, imatges i àudios (sense edició) i programmes informàtics senzills, en activitats basades en un context real i proper dirigides pel o per la docent."
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
