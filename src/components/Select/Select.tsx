@@ -7,8 +7,8 @@ const Select = ({
   name,
   setSelections,
 }: SelectProps): JSX.Element => {
-  const displayedOptions = options?.map(option => (
-    <option key={option} name={name}>
+  const displayedOptions = options?.map((option, index) => (
+    <option key={index} value={option}>
       {option}
     </option>
   ));
@@ -29,6 +29,7 @@ const Select = ({
       </label>
       <select
         id={id}
+        name={name}
         className='select select-primary select-sm border-none m-0 bg-neutral/20 w-full md:w-2/4 lg:w-3/5 text-secondary'
         defaultValue={'Choose option'}
         onChange={e => handleSelect(e)}

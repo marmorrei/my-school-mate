@@ -12,13 +12,13 @@ const LearningSituationSelect = (): JSX.Element => {
   const [learningSituations, setLearningSituations] = useState<OptionsType>([
     '',
   ]);
-  const [competences, setCompetences] = useState<OptionsType>(['']);
-  const [criteria, setCriteria] = useState<OptionsType>(['']);
+
   const [selections, setSelections] = useState({
     name: '',
     specificCompetence: '',
     assessmentCriteria: '',
   });
+  console.log(selections);
 
   useEffect(() => {
     fetchLearningSituations()
@@ -37,13 +37,6 @@ const LearningSituationSelect = (): JSX.Element => {
       });
   }, []);
 
-  useEffect(() => {
-    const selected = learningSituationsList?.map(
-      item => item.title === selections.name,
-    );
-    console.log(selected);
-  }, [selections.name]);
-
   return (
     <div className='shadow-md rounded w-full md:w-2/4 p-4'>
       <Select
@@ -53,22 +46,6 @@ const LearningSituationSelect = (): JSX.Element => {
         name='name'
         setSelections={setSelections}
       />
-      <div className='mt-2 pt-2 border-t-2 border-primary/20 text-xs space-y-2 flex flex-col justify-end'>
-        <Select
-          label='Specific competence'
-          id='learn-sit-specific-competence'
-          options={competences}
-          name='specificCompetence'
-          setSelections={setSelections}
-        />
-        <Select
-          label='Assessment criteria'
-          id='learn-sit-assessment-criteria'
-          options={criteria}
-          name='assessmentCriteria'
-          setSelections={setSelections}
-        />
-      </div>
     </div>
   );
 };
