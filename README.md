@@ -93,6 +93,10 @@ This is an ongoing project with the aim to make a powerfull tool for teachers, i
 
 ---
 
+- Testing user:
+  - email: test@email.com
+  - password: 123456
+
 [Link to Demo](https://my-school-mate.vercel.app/)
 
 ![MySchoolMateQR](https://github.com/marmorrei/my-school-mate/assets/124587546/b4926de0-9065-4569-929f-130e1e9b8f34)
