@@ -34,9 +34,16 @@ const Login = (): JSX.Element => {
         email: formData.email,
         password: formData.password,
       });
-      if (error != null) throw new Error();
+
+      if (error != null) {
+        if (error.message.includes('Invalid login credentials')) {
+          alert('Invalid password or email address!');
+        } else {
+          alert(`Error during login: ${error.message}`);
+        }
+      }
     } catch (error) {
-      console.log(error);
+      console.error(error);
     } finally {
       resetData();
     }

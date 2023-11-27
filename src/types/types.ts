@@ -4,6 +4,19 @@ export interface SelectProps {
   label: string;
   id: string;
   options: string[];
+  name: string;
+  // selections: {
+  //   name: string;
+  //   specificCompetence: string;
+  //   assessmentCriteria: string;
+  // };
+  setSelections: React.Dispatch<
+    React.SetStateAction<{
+      name: string;
+      specificCompetence: string;
+      assessmentCriteria: string;
+    }>
+  >;
 }
 export type Props = {
   children: ReactNode;
@@ -71,3 +84,5 @@ export type LoginContextType = {
   isLogged: boolean;
   updateLoginState: (newLoginState: boolean) => void;
 };
+
+export type OptionsType = string[];

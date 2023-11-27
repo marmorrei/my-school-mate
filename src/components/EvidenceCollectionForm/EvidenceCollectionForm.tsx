@@ -1,13 +1,14 @@
 import Comments from '../Comments/Comments';
 import FileUpload from '../FileUpload/FileUpload';
 import SearchStudent from '../SearchStudent/SearchStudent';
-import Select from '../Select/Select';
 import { useStudentContext } from '../../context/EvidenceCollectionProvider';
+import SubjectArea from '../SubjectAreaSelect/SubjectArea';
+import KeyCompetence from '../KeyCompetenceSelect/KeyCompetence';
+import LearningSituationSelect from '../LearningSituationSelect/LearningSituationSelect';
 
 const EvidenceCollectionForm = (): JSX.Element => {
-  const options: string[] = ['Option 1', 'Option 2', 'Option 3'];
   const { selectedStudent } = useStudentContext();
-
+  // NEXT STEP: SUBSELECTIONS, UPLOAD FILE+COMMENTS, HANDLE SUBMIT
   return (
     <>
       {/* Open the modal using document.getElementById('ID').showModal() method */}
@@ -81,65 +82,11 @@ const EvidenceCollectionForm = (): JSX.Element => {
             </div>
             <div className='form-data flex flex-col space-y-3 w-full md:flex-row md:flex-wrap md:justify-between md:space-y-0'>
               {/* LEARNING SITUATION */}
-              <div className='shadow-md rounded w-full md:w-2/4 p-4'>
-                <Select
-                  label='Learning situation'
-                  id='learning-situation'
-                  options={options}
-                />
-                <div className='mt-2 pt-2 border-t-2 border-primary/20 text-xs space-y-2 flex flex-col justify-end'>
-                  <Select
-                    label='Specific competence'
-                    id='learn-sit-specific-competence'
-                    options={options}
-                  />
-                  <Select
-                    label='Assessment criteria'
-                    id='learn-sit-assessment-criteria'
-                    options={options}
-                  />
-                </div>
-              </div>
+              <LearningSituationSelect />
               {/* SUBJECT AREA */}
-              <div className='shadow-md rounded w-full md:w-2/4 p-4'>
-                <Select
-                  label='Subject area'
-                  id='subject-area'
-                  options={options}
-                />
-                <div className='mt-2 pt-2 border-t-2 border-primary/20 text-xs space-y-2 flex flex-col justify-end'>
-                  <Select
-                    label='Specific competence'
-                    id='subject-specific-competence'
-                    options={options}
-                  />
-                  <Select
-                    label='Assessment criteria'
-                    id='subject-assessment-criteria'
-                    options={options}
-                  />
-                </div>
-              </div>
+              <SubjectArea />
               {/* KEY COMPETENCE */}
-              <div className='shadow-md rounded w-full md:w-2/4 p-4'>
-                <Select
-                  label='Key competence'
-                  id='key-competence'
-                  options={options}
-                />
-                <div className='mt-2 pt-2 border-t-2 border-primary/20 text-xs space-y-2 flex flex-col justify-end'>
-                  <Select
-                    label='Specific competence'
-                    id='key-specific-competence'
-                    options={options}
-                  />
-                  <Select
-                    label='Assessment criteria'
-                    id='key-assessment-criteria'
-                    options={options}
-                  />
-                </div>
-              </div>
+              <KeyCompetence />
               {/* LEARNING EVIDENCE */}
               <div className='shadow-md rounded w-full md:w-2/4 p-4 space-y-3'>
                 <FileUpload />
