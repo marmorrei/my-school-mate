@@ -8,7 +8,7 @@ import LearningSituationSelect from '../LearningSituationSelect/LearningSituatio
 
 const EvidenceCollectionForm = (): JSX.Element => {
   const { selectedStudent } = useStudentContext();
-
+  // NEXT STEP: SUBSELECTIONS, UPLOAD FILE+COMMENTS, HANDLE SUBMIT
   return (
     <>
       {/* Open the modal using document.getElementById('ID').showModal() method */}

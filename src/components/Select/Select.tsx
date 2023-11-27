@@ -15,7 +15,6 @@ const Select = ({
 
   const handleSelect = (e: React.ChangeEvent<HTMLSelectElement>): void => {
     const selected = e.target.value;
-    console.log('select', selected);
     setSelections(prevSelections => {
       return {
         ...prevSelections,

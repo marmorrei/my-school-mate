@@ -28,7 +28,7 @@ const SubjectArea = (): JSX.Element => {
       competence => competence.name,
     );
     setCompetences(competencesList);
-    console.log(competencesList);
+    // console.log(competencesList);
   }, [selections.name]);
 
   useEffect(() => {
@@ -40,10 +40,10 @@ const SubjectArea = (): JSX.Element => {
 
     const criteriaList = chosenCompetence?.['assessment-criteria'];
     setCriteria(criteriaList);
-    console.log(criteriaList);
+    // console.log(criteriaList);
   }, [selections.name, selections.specificCompetence]);
 
-  console.log(selections);
+  //   console.log(selections);
   return (
     <div className='shadow-md rounded w-full md:w-2/4 p-4'>
       <Select

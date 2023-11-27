@@ -86,19 +86,3 @@ export type LoginContextType = {
 };
 
 export type OptionsType = string[];
-
-export interface CycleData {
-  'subject-areas-cycle-1': {
-    mathematics: {
-      'specific-competences': {
-        'specific-competence-1': {
-          content: 'Traduir problemes i interpretar situacions quotidianes fent-ne una representació matemàtica personal a través de conceptes, eines i estratègies per analitzar-ne els elements més rellevants. ';
-          'assessment-criteria': {
-            '1.1': ' Iniciar-se en la interpretació de la informació d’un problema i d’una situació de la vida quotidiana responent a les preguntes plantejades o fent noves preguntes.';
-            '1.2': ' Proposar representacions matemàtiques, amb recursos manipulatius, gràfics i digitals, orientades a la resolució de problemes i de situacions de la vida quotidiana.';
-          };
-        };
-      };
-    };
-  };
-}
