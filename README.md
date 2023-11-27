@@ -46,16 +46,17 @@ This is an ongoing project with the aim to make a powerfull tool for teachers, i
 ---
 
 ### Front End
-- Typescript
+- Typescript (5.2.2)
 - React (18.2.0) + Vite (4.4.5)
 - Context
-- TailwindCSS + daisyUI
+- React-router-dom (6.20.0)
+- TailwindCSS (3.3.5) + daisyUI (4.0.4)
 
 ### BaaS
 - Supabase (Supabase JS client library)
 
 ### Dev and Deployment
-- Eslint (8.52.0) + Prettier (3.0.3)
+- Eslint (8.53.0) + Prettier (3.1.0)
 - SonarCloud and Codesee on GitHub
 - Vercel + Supabase integration
 
