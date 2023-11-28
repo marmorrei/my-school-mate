@@ -12,21 +12,19 @@ import {
 } from '../types/types';
 
 // CREATE CONTEXTS
-const StudentContext = createContext<StudentContextType>(
-  {} as StudentContextType,
+const StudentContext = createContext<StudentContextType | undefined>(undefined);
+
+const SubjectAreaContext = createContext<SubjectAreaContextType | undefined>(
+  undefined,
 );
 
-const SubjectAreaContext = createContext<SubjectAreaContextType>(
-  {} as SubjectAreaContextType,
-);
+const LearningSituationContext = createContext<
+  LearningSituationContextType | undefined
+>(undefined);
 
-const LearningSituationContext = createContext<LearningSituationContextType>(
-  {} as LearningSituationContextType,
-);
-
-const KeyCompetenceContext = createContext<KeyCompetenceContextType>(
-  {} as KeyCompetenceContextType,
-);
+const KeyCompetenceContext = createContext<
+  KeyCompetenceContextType | undefined
+>(undefined);
 
 // CUSTOM HOOKS
 export const useStudentContext = (): StudentContextType => {
