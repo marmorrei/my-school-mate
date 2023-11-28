@@ -1,13 +1,29 @@
 import Comments from '../Comments/Comments';
 import FileUpload from '../FileUpload/FileUpload';
 import SearchStudent from '../SearchStudent/SearchStudent';
-import { useStudentContext } from '../../context/EvidenceCollectionProvider';
+import {
+  useKeyCompetenceContext,
+  useLearningSituationContext,
+  useStudentContext,
+  useSubjectAreaContext,
+} from '../../context/EvidenceCollectionProvider';
 import SubjectArea from '../SubjectAreaSelect/SubjectArea';
 import KeyCompetence from '../KeyCompetenceSelect/KeyCompetence';
 import LearningSituationSelect from '../LearningSituationSelect/LearningSituationSelect';
 
 const EvidenceCollectionForm = (): JSX.Element => {
-  const { selectedStudent } = useStudentContext();
+  const { selectedStudent, updateStudent } = useStudentContext();
+  const { updateSubjectArea } = useSubjectAreaContext();
+  const { updateKeyCompetence } = useKeyCompetenceContext();
+  const { updateLearningSituation } = useLearningSituationContext();
+
+  const resetData = (): void => {
+    updateStudent(undefined);
+    updateSubjectArea(undefined);
+    updateKeyCompetence(undefined);
+    updateLearningSituation(undefined);
+  };
+
   // NEXT STEP: SUBSELECTIONS, UPLOAD FILE+COMMENTS, HANDLE SUBMIT
   return (
     <>
@@ -38,7 +54,10 @@ const EvidenceCollectionForm = (): JSX.Element => {
             method='dialog'
             className='modal-action mt-0 space-y-4 flex-col justify-center items-center w-full'
           >
-            <button className='btn btn-sm btn-circle btn-ghost absolute right-2 top-2'>
+            <button
+              className='btn btn-sm btn-circle btn-ghost absolute right-2 top-2'
+              onClick={resetData}
+            >
               <img
                 className='h-5'
                 src='/assets/images/close-bold-svgrepo-com.svg'
@@ -61,18 +80,19 @@ const EvidenceCollectionForm = (): JSX.Element => {
                 </div>
                 <div className='name-course flex flex-col'>
                   <p className='text-primary text-xs font-bold'>
-                    {selectedStudent !== null
+                    {selectedStudent !== undefined
                       ? `${selectedStudent.name} ${selectedStudent.surname}`
-                      : 'Student´s name'}
+                      : ''}
                   </p>
                   <p className='text-primary text-xs font-bold'>
-                    {selectedStudent !== null
+                    {selectedStudent !== undefined
                       ? `Primary ${selectedStudent.course}`
-                      : 'and course'}
+                      : ''}
                   </p>
                 </div>
               </div>
               <SearchStudent />
+              {/* SUBMIT BUTTON DESKTOP */}
               <button
                 className='hidden md:block btn btn-sm btn-neutral border-2 border-primary text-primary 
                         hover:border-neutral hover:bg-transparent self-end'
@@ -93,6 +113,7 @@ const EvidenceCollectionForm = (): JSX.Element => {
                 <Comments />
               </div>
             </div>
+            {/* SUBMIT BUTTON MOBILE */}
             <button
               className='btn btn-sm btn-neutral border-2 border-primary text-primary 
                         hover:border-neutral hover:bg-transparent self-end md:hidden'

@@ -1,6 +1,6 @@
 import { supabase } from '../../supabase/supabase';
 
-// GET LEARNING SITUATIONS TITLES
+// GET LEARNING SITUATIONS
 export const fetchLearningSituations = async (): Promise<any> => {
   try {
     const { data: learning_situations, error } = await supabase

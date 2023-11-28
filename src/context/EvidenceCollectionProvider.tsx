@@ -12,28 +12,26 @@ import {
 } from '../types/types';
 
 // CREATE CONTEXTS
-const StudentContext = createContext<StudentContextType>(
-  {} as StudentContextType,
+const StudentContext = createContext<StudentContextType | undefined>(undefined);
+
+const SubjectAreaContext = createContext<SubjectAreaContextType | undefined>(
+  undefined,
 );
 
-const SubjectAreaContext = createContext<SubjectAreaContextType>(
-  {} as SubjectAreaContextType,
-);
+const LearningSituationContext = createContext<
+  LearningSituationContextType | undefined
+>(undefined);
 
-const LearningSituationContext = createContext<LearningSituationContextType>(
-  {} as LearningSituationContextType,
-);
-
-const KeyCompetenceContext = createContext<KeyCompetenceContextType>(
-  {} as KeyCompetenceContextType,
-);
+const KeyCompetenceContext = createContext<
+  KeyCompetenceContextType | undefined
+>(undefined);
 
 // CUSTOM HOOKS
 export const useStudentContext = (): StudentContextType => {
   const studentContext = useContext(StudentContext);
   if (studentContext === undefined)
     throw new Error(
-      'useStudentContext must be used within a EvidenceCollectionProvider',
+      'useStudentContext must be used within an EvidenceCollectionProvider',
     );
   return studentContext;
 };
@@ -42,7 +40,7 @@ export const useSubjectAreaContext = (): SubjectAreaContextType => {
   const subjectAreaContext = useContext(SubjectAreaContext);
   if (subjectAreaContext === undefined)
     throw new Error(
-      'useSubjectAreaContext must be used within a EvidenceCollectionProvider',
+      'useSubjectAreaContext must be used within an EvidenceCollectionProvider',
     );
   return subjectAreaContext;
 };
@@ -51,7 +49,7 @@ export const useLearningSituationContext = (): LearningSituationContextType => {
   const learningSituationContext = useContext(LearningSituationContext);
   if (learningSituationContext === undefined)
     throw new Error(
-      'useLearningSituationContext must be used within a EvidenceCollectionProvider',
+      'useLearningSituationContext must be used within an EvidenceCollectionProvider',
     );
   return learningSituationContext;
 };
@@ -60,7 +58,7 @@ export const useKeyCompetenceContext = (): KeyCompetenceContextType => {
   const keyCompetenceContext = useContext(KeyCompetenceContext);
   if (keyCompetenceContext === undefined)
     throw new Error(
-      'useKeyCompetenceContext must be used within a EvidenceCollectionProvider',
+      'useKeyCompetenceContext must be used within an EvidenceCollectionProvider',
     );
   return keyCompetenceContext;
 };
@@ -68,16 +66,17 @@ export const useKeyCompetenceContext = (): KeyCompetenceContextType => {
 // CONTEXT PROVIDER
 export const EvidenceCollectionProvider = (props: Props): JSX.Element => {
   // useState
-  const [selectedStudent, setSelectedStudent] = useState<StudentType>(null);
+  const [selectedStudent, setSelectedStudent] =
+    useState<StudentType>(undefined);
 
   const [selectedSubjectArea, setSelectedSubjectArea] =
-    useState<SubjectAreaType>(null);
+    useState<SubjectAreaType>(undefined);
 
   const [selectedLearningSituation, setSelectedLearningSituation] =
-    useState<LearningSituationType>(null);
+    useState<LearningSituationType>();
 
   const [selectedKeyCompetence, setSelectedKeyCompetence] =
-    useState<KeyCompetenceType>(null);
+    useState<KeyCompetenceType>(undefined);
 
   // update states
   const updateStudent = (newStudent: StudentType): void => {

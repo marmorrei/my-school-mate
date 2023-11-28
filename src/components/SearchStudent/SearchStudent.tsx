@@ -21,7 +21,6 @@ const SearchStudent = (): JSX.Element => {
     setInput(value);
     fetchStudents()
       .then(result => {
-        console.log('Search', result);
         const foundStudents = result.filter(
           (item: { name: string; surname: string }) =>
             value !== undefined &&
@@ -30,7 +29,6 @@ const SearchStudent = (): JSX.Element => {
               item.surname.toLowerCase().includes(value.toLowerCase())),
         );
         setResults(foundStudents);
-        console.log('foundStudents', foundStudents);
       })
       .catch(error => {
         console.log(error);
@@ -38,7 +36,7 @@ const SearchStudent = (): JSX.Element => {
   };
 
   const displayResults = results?.map(result => (
-    <li
+    <option
       className='px-2.5 text-md md:text-sm hover:bg-neutral rounded-md'
       key={result.id}
       onClick={() => {
@@ -55,7 +53,7 @@ const SearchStudent = (): JSX.Element => {
       }}
     >
       {result.name} {result.surname}
-    </li>
+    </option>
   ));
 
   return (
@@ -70,9 +68,9 @@ const SearchStudent = (): JSX.Element => {
         className='input border-none input-primary input-sm bg-neutral/20 w-full text-primary max-w-xs'
       />
       {results !== undefined && (
-        <ul className='bg-neutral/20 w-full text-secondary cursor-default rounded-md overflow-y-scroll md:w-4/5 lg:w-2/3'>
+        <div className='bg-neutral/20 w-full text-secondary cursor-default rounded-md overflow-y-scroll md:w-4/5 lg:w-2/3'>
           {displayResults}
-        </ul>
+        </div>
       )}
     </div>
   );
