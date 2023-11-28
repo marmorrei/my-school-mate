@@ -1,73 +1,71 @@
-import { ReactNode } from 'react';
+import { type ReactNode } from 'react';
 
 export interface SelectProps {
   label: string;
   id: string;
-  options: string[];
+  options: string[] | undefined;
   name: string;
-  // selections: {
-  //   name: string;
-  //   specificCompetence: string;
-  //   assessmentCriteria: string;
-  // };
-  setSelections: React.Dispatch<
-    React.SetStateAction<{
+  setSelection: React.Dispatch<React.SetStateAction<string>>;
+}
+export interface Props {
+  children: ReactNode;
+}
+
+export type StudentType =
+  | {
+      id: string;
+      name: string;
+      surname: string;
+      course: string;
+      cycle: number;
+    }
+  | undefined;
+
+export interface StudentContextType {
+  selectedStudent: StudentType;
+  updateStudent: (newStudent: StudentType) => void;
+}
+
+export type SubjectAreaType =
+  | {
       name: string;
       specificCompetence: string;
       assessmentCriteria: string;
-    }>
-  >;
-}
-export type Props = {
-  children: ReactNode;
-};
+    }
+  | undefined;
 
-export type StudentType = {
-  id: string;
-  name: string;
-  surname: string;
-  course: string;
-  cycle: number;
-} | null;
-
-export type StudentContextType = {
-  selectedStudent: StudentType;
-  updateStudent: (newStudent: StudentType) => void;
-};
-
-export type SubjectAreaType = {
-  name: string;
-  specificCompetence: string;
-  assessmentCriteria: string;
-} | null;
-
-export type SubjectAreaContextType = {
+export interface SubjectAreaContextType {
   selectedSubjectArea: SubjectAreaType;
   updateSubjectArea: (newSubjectArea: SubjectAreaType) => void;
-};
+}
 
-export type LearningSituationType = {
-  title: string;
-  subjectArea: string;
-} | null;
+export type LearningSituationType =
+  | {
+      title: string;
+      specific_competence: string;
+      assessment_criteria: string;
+    }
+  | undefined;
 
-export type LearningSituationContextType = {
+export interface LearningSituationContextType {
   selectedLearningSituation: LearningSituationType;
   updateLearningSituation: (
     newLearningSituation: LearningSituationType,
   ) => void;
-};
+}
 
-export type KeyCompetenceType = {
-  name: string;
-  specificCompetence: string;
-  assessmentCriteria: string;
-} | null;
+export type KeyCompetenceType =
+  | {
+      name: string;
+      specificCompetence: string;
+      assessmentCriteria: string;
+    }
+  | undefined;
 
-export type KeyCompetenceContextType = {
+export interface KeyCompetenceContextType {
   selectedKeyCompetence: KeyCompetenceType;
   updateKeyCompetence: (newKeyCompetence: KeyCompetenceType) => void;
-};
+}
 
 export type UserType = {
   user_id: string | undefined;
@@ -75,14 +73,14 @@ export type UserType = {
   surname: string;
 } | null;
 
-export type UserContextType = {
+export interface UserContextType {
   userData: UserType;
   updateUserData: (newUserData: UserType) => void;
-};
+}
 
-export type LoginContextType = {
+export interface LoginContextType {
   isLogged: boolean;
   updateLoginState: (newLoginState: boolean) => void;
-};
+}
 
-export type OptionsType = string[];
+export type OptionsType = string[] | undefined;

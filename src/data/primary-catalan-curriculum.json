@@ -12,7 +12,7 @@
             ]
           },
           {
-            "name": "2. Resoldre problemes, aplicant diferents tècniques, estratègies i formes de raonament, per explorar i compartir diferents maneres de procedir, obtenir solucions i assegurar la seva validesa des d’un punt de vista formal i en relació amb el context plantejat i generar noves preguntes i reptes.",
+            "name": "2. Resoldre problemes, aplicant diferents tècniques, estratègies i formes de raonament, per explorar i compartir diferents maneres de procedir, obtenir solucions i assegurar la seva validesa des d’un punt de vista formal i en relació amb el context plantejat i generar noves preguntes i reptes. ",
             "assessment-criteria": [
               "2.1 Emprar estratègies i formes pròpies de raonar per resoldre un problema i explicar el procés.",
               "2.2 Explorar, compartir i resoldre un mateix problema a partir de diferents propostes, parlant-ne sense biaix de gènere.",
@@ -25,6 +25,42 @@
               "3.1 Iniciar-se en la realització de conjectures matemàtiques investigant patrons i propietats, fent deduccions i comprovant-les.",
               "3.2 Proposar exemples de problemes i situacions i explicant com es poden resoldre matemàticament.",
               "3.3 Incorporar la utilització de la visualització i del raonament geomètric com a forma de raonament per entendre i gestionar la informació referida a l’espai."
+            ]
+          },
+          {
+            "name": "4. Utilitzar el pensament computacional, descompondre en parts més petites, reconeixent patrons i dissenyant algorismes per solucionar problemes i situacions de la vida quotidiana. ",
+            "assessment-criteria": [
+              "4.1 Descriure rutines i activitats senzilles que es realitzin pas a pas, en situacions de l’aula i de la vida quotidiana.",
+              "4.2 Descompondre un problema o situació de la vida quotidiana en tasques concretes, abordant-les d’una en una per poder trobar la solució global.",
+              "4.3 Reconèixer patrons, similituds i tendències en els problemes o situacions que es volen solucionar.",
+              "4.4 Explicar instruccions pas a pas per resoldre un problema i d’altres de similars provant i duent a terme possibles solucions amb dispositius digitals i sense."
+            ]
+          },
+          {
+            "name": "5. Utilitzar connexions entre diferents idees matemàtiques, així com identificar les matemàtiques implicades en altres àrees o amb la vida quotidiana, interrelacionant conceptes i procediments per interpretar situacions i contextos diversos.",
+            "assessment-criteria": [
+              "5.1 Reconèixer connexions entre els diferents elements matemàtics relacionant i ampliar coneixements en un context matemàtic.",
+              "5.2 Reconèixer les matemàtiques presents en la vida quotidiana i en altres àrees en situacions en què se’n pugui fer ús."
+            ]
+          },
+          {
+            "name": "6. Comunicar i representar, de forma individual i col·lectiva, conceptes, procediments i resultats matemàtics utilitzant el llenguatge oral, escrit, gràfic, multimodal, en diferents formats i amb la terminologia matemàtica adequada, per donar significat i permanència a les idees matemàtiques.",
+            "assessment-criteria": [
+              "6.1 Seleccionar el llenguatge matemàtic bàsic present en la vida quotidiana donant-li significat.",
+              "6.2 Explicar idees i processos matemàtics utilitzats en la resolució d’un problema o justificant la solució obtinguda de forma verbal, amb l’ajuda del gest o de la representació gràfica."
+            ]
+          },
+          {
+            "name": "7. Desenvolupar destreses personals que ajudin a identificar i gestionar emocions, aprenent de l’error i afrontant les situacions d’incertesa com una oportunitat, per perseverar i gaudir del procés d’aprendre matemàtiques.",
+            "assessment-criteria": [
+              "7.1 Reconèixer les pròpies emocions en abordar nous reptes matemàtics, sent proactiu en la cerca de possibles solucions, demanant ajuda només després d’un primer intent.",
+              "7.2 Expressar actituds positives davant de nous reptes matemàtics, com ara la predisposició i la receptivitat, entenent l’error com una oportunitat d’aprenentatge."
+            ]
+          },
+          {
+            "name": "8. Desenvolupar destreses socials participant activament en els equips de treball i reconeixent la diversitat i el valor de les aportacions dels altres, per compartir i construir coneixement matemàtic de manera col·lectiva.",
+            "assessment-criteria": [
+              "8.1 Participar en el treball en equip, tant en entorn presencial com virtual, escoltant les altres persones reconeixent les seves aportacions, en situacions en què es comparteixi i construeixi coneixement matemàtic de manera conjunta."
             ]
           }
         ]
@@ -54,45 +90,546 @@
               "3.2 Practicar jocs i activitats individuals i col·lectives d’expressió i comunicació corporal tot defugint d’assignar-les a un tipus determinat de persones segons el seu gènere.",
               "3.3 Comunicar vivències, emocions i idees a través de manifestacions expressives senzilles utilitzant els recursos expressius del propi cos."
             ]
+          },
+          {
+            "name": "4. Valorar l’entorn com a espai de pràctica d’activitats físiques i d’ocupació del temps de lleure, utilitzant-lo de manera respectuosa i responsable per participar en la seva conservació i millora.",
+            "assessment-criteria": [
+              "4.1 Practicar algun tipus d’activitat física vinculada al barri, al poble o a la ciutat o al medi natural com una forma d’enriquir les tipologies d’activitats físiques que es donen en contextos de pràctica motriu a l’escola i d’ocupar el temps de lleure.",
+              "4.2 Valorar l’entorn com a espai de pràctica d’activitats físiques saludables i satisfactòries en el temps de lleure fent-ne un ús respectuós."
+            ]
+          },
+          {
+            "name": "5. Mostrar comportaments i actituds empàtiques i inclusives en la pràctica d’activitats físiques emprant habilitats socials i processos d’autoregulació per fomentar la convivència.",
+            "assessment-criteria": [
+              "5.1 Participar en activitats físiques percebent les emocions i els sentiments propis i de les altres persones, controlant les emocions pròpies negatives que hi puguin aparèixer fomentant la convivència.",
+              "5.2 Respectar les normes de funcionament de la classe, les regles de les activitats practicades, els espais i els materials emprats en els contextos de pràctica motriu a l’escola.",
+              "5.3 Reconèixer que en la pràctica d’activitats físiques tothom és diferent.",
+              "5.4 Desenvolupar habilitats socials a través de la participació en contextos de pràctica motriu a l’escola, iniciant-se en la resolució de conflictes.",
+              "5.5 Mostrar una actitud de rebuig vers actuacions contràries a la convivència en la pràctica d’activitats físiques."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Catalan/Spanish Language",
+        "specific-competences": [
+          {
+            "name": "1. Prendre consciència de la diversitat lingüística i cultural a partir del reconeixement de les llengües de l’alumnat i la realitat plurilingüe i pluricultural per afavorir la transferència lingüística, identificar i rebutjar estereotips i prejudicis lingüístics i culturals i valorar aquesta diversitat com a font de riquesa cultural. ",
+            "assessment-criteria": [
+              "1.1 Identificar les diferents llengües de l’entorn, inclosa la llengua de signes, i les seves variants dialectals, a través de la descripció d’algunes expressions d’ús quotidià.",
+              "1.2 Detectar i rebutjar, de manera acompanyada i en contextos senzills i propers, alguns prejudicis i estereotips lingüístics, de gènere i culturals molt freqüents.",
+              "1.3 Descriure i valorar la pluralitat lingüística de l’entorn com a font de riquesa cultural, a partir de l’observació i la identificació de la realitat pròxima."
+            ]
+          },
+          {
+            "name": "2. Comprendre i interpretar textos orals i multimodals, i identificar el sentit general i la informació més rellevant, valorant, de manera progressivament autònoma, aspectes formals i de contingut bàsics per construir coneixement, formar-se una opinió i eixamplar les possibilitats de gaudi i lleure.",
+            "assessment-criteria": [
+              "2.1 Extreure informació rellevant de produccions orals i multimodals relacionats amb situacions d’aprenentatge i la vida quotidiana de l’aula.",
+              "2.2 Reconèixer, de forma acompanyada, el tema, idees principals i missatges explícits de textos orals i multimodals. Iniciar-se, també de forma acompanyada, en la valoració del contingut i de la forma (elements no verbals)."
+            ]
+          },
+          {
+            "name": "3. Produir textos orals i multimodals amb coherència, claredat i registre adequats, atenent les convencions pròpies dels diferents gèneres discursius, i participar en interaccions orals variades, amb autonomia, per expressar idees, sentiments, emocions i conceptes, construir coneixement i establir vincles personals.",
+            "assessment-criteria": [
+              "3.1 Produir textos orals i multimodals coherents a partir d’una situació comunicativa propera (vivències, fets i aprenentatges), amb planificació acompanyada, adaptant el to de veu i el gest a la situació, i utilitzant recursos no verbals elementals i elements de suport."
+            ]
+          },
+          {
+            "name": "4. Comprendre i interpretar textos escrits i multimodals, reconeixent el sentit global, les idees principals i la informació implícita i explícita, i realitzant, de manera progressivament autònoma, reflexions elementals sobre aspectes formals i de contingut, per construir coneixement, i respondre a necessitats i interessos comunicatius diversos.",
+            "assessment-criteria": [
+              "4.1 Llegir textos propers, de la vida quotidiana, dels mitjans de comunicació i textos escolars, de forma silenciosa i en veu alta, amb fluïdesa suficient (velocitat, precisió en el reconeixement de les paraules, ritme, fraseig i entonació).",
+              "4.2 Comprendre textos escrits i multimodals propers, adequats al desenvolupament cognitiu, amb l’ajuda d’elements gràfics i paratextuals bàsics, a través de la identificació del sentit global i informació rellevant i emprant, de forma guiada, estratègies bàsiques de comprensió.",
+              "4.3 Valorar, de manera acompanyada, el contingut i aspectes formals i paratextuals en textos escrits i multimodals senzills."
+            ]
+          },
+          {
+            "name": "5. Produir textos escrits i multimodals, amb adequació, coherència i cohesió, i aplicant estratègies elementals de planificació, redacció, revisió, correcció i edició, amb regulació dels iguals i autoregulació progressivament autònoma i atenent les convencions pròpies del gènere discursiu triat, per construir coneixement i donar resposta de manera informada, eficaç i creativa a demandes comunicatives concretes.",
+            "assessment-criteria": [
+              "5.1 Redactar textos escrits i multimodals propers i viscuts, des de les diferents etapes del procés evolutiu de l’escriptura, de manera acompanyada, per a un destinatari i amb una intenció concreta, amb adequació, coherència, cohesió i correcció adaptades al moment evolutiu (ortografia natural o de base).",
+              "5.2 Aplicar estratègies de planificació, redacció, revisió i edició de textos amb acompanyament, de manera individual o grupal."
+            ]
+          },
+          {
+            "name": "6. Cercar, seleccionar i contrastar informació procedent de diverses fonts, de forma planificada i de manera progressivament autònoma, avaluant la seva fiabilitat, reconeixent alguns riscos de manipulació i desinformació i adoptant un punt de vista personal i respectuós amb la propietat intel·lectual, per transformar aquesta informació en coneixement i comunicar-la de manera creativa.",
+            "assessment-criteria": [
+              "6.1 Aplicar estratègies de cerca d’informació (localització, selecció i contrast) en diferents fonts, incloses les digitals, sobre temes propers i d’interès personal, de forma guiada, a la xarxa i a les biblioteques.",
+              "6.2 Comunicar els resultats d’un procés d’investigació, individual o grupal, realitzat de forma acompanyada, sobre temes propers i d’interès personal.",
+              "6.3 Adoptar hàbits d’ús segur i saludable de les tecnologies digitals de forma guiada en relació amb l’accés a la informació i a la comunicació en l’entorn immediat."
+            ]
+          },
+          {
+            "name": "7. Seleccionar i llegir de manera autònoma obres diverses com a font de plaer i coneixement, configurant un itinerari lector que s’enriqueixi progressivament pel que fa a diversitat, complexitat i qualitat de les obres, i compartir experiències de lectura, per construir la pròpia identitat lectora i gaudir de la dimensió social de la lectura.",
+            "assessment-criteria": [
+              "7.1 Llegir de manera autònoma textos de diferents autors i autores que s’adeqüin als seus gustos i interessos, seleccionats de manera acompanyada, des de les diferents etapes del procés evolutiu de la lectura.",
+              "7.2 Compartir lectures, per mitjà de recomanacions, presentacions i a partir d’interaccions orals, mitjançant la biblioteca d’aula i de centre, per expressar gustos i interessos i iniciar-se en una comunitat lectora."
+            ]
+          },
+          {
+            "name": "8. Llegir, interpretar i analitzar, de manera progressivament autònoma, obres o fragments literaris adequats, establint relacions entre ells i identificant el gènere literari i les seves convencions fonamentals, per reconèixer la literatura com a manifestació artística i font de plaer, coneixement i inspiració per a la creació de textos d’intenció literària.",
+            "assessment-criteria": [
+              "8.1 Escoltar i llegir textos orals i escrits de la literatura infantil, d’autors i autores reconeguts, descobrint de manera acompanyada els elements essencials de l’obra i establint relacions elementals entre els textos i amb altres manifestacions artístiques i culturals.",
+              "8.2 Produir textos individuals o col·lectius amb intenció literària, segons les diferents etapes del procés evolutiu de l’escriptura, de manera acompanyada, en diferents suports, i complementant-los amb altres llenguatges artístics."
+            ]
+          },
+          {
+            "name": "9. Reflexionar de forma guiada sobre el llenguatge i reconèixer i usar els repertoris lingüístics personals, a partir de processos de comprensió i producció de textos orals, escrits, utilitzant la terminologia elemental adequada, per iniciar-se en el desenvolupament de la consciència lingüística i millorar les destreses en la posada en pràctica d’aquests processos.",
+            "assessment-criteria": [
+              "9.1 Formular conclusions elementals sobre la construcció de paraules, frases i textos utilitzant l’ordre adequat i la concordança dels mots en una frase a partir de l’experimentació amb les paraules.",
+              "9.2 Revisar i millorar les diferents produccions, escrites, orals i multimodals, de manera acompanyada i usant la terminologia lingüística bàsica adequada."
+            ]
+          },
+          {
+            "name": "10. Utilitzar un llenguatge no discriminatori i desterrar els abusos de poder a través de la paraula, per afavorir un ús eficaç, ètic i democràtic del llenguatge, i posar al servei de la convivència democràtica, la resolució dialogada dels conflictes i la igualtat de drets de totes les persones, les pròpies pràctiques comunicatives.",
+            "assessment-criteria": [
+              "10.1 Rebutjar els usos lingüístics discriminatoris identificats a partir de la reflexió grupal acompanyada sobre els aspectes elementals, verbals i no verbals, que regeixen la comunicació, tenint en compte la perspectiva de gènere.",
+              "10.2 Utilitzar, amb l’acompanyament i planificació necessaris, estratègies elementals per a l’escolta activa i el consens, iniciant-se en la gestió dialogada de conflictes."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Natural, Social and Cutural Science",
+        "specific-competences": [
+          {
+            "name": "1. Seleccionar i utilitzar dispositius i recursos digitals de forma responsable i eficient per tal de buscar informació, comunicar-se i treballar col·laborativament i en xarxa i per crear continguts segons les necessitats digitals del context.",
+            "assessment-criteria": [
+              "1.1 Fer ús, de forma responsable i guiada, de diferents fonts digitals per a la cerca d’informació, tant en grup com individualment.",
+              "1.2 Utilitzar dispositius i recursos digitals per comunicar-se amb els altres i com a suport per donar a conèixer els propis aprenentatges.",
+              "1.3 Crear, de manera guiada, continguts digitals senzills per construir el coneixement segons la necessitat del context."
+            ]
+          },
+          {
+            "name": "2. Plantejar-se preguntes sobre el món, aplicant les diferents formes de raonament i mètodes del pensament científic, per interpretar, respondre i predir els fets i fenòmens del medi natural, social i cultural i per prendre decisions creatives i decidir actuacions ètiques i socialment sostenibles.",
+            "assessment-criteria": [
+              "2.1 Demostrar curiositat, formulant-se preguntes i realitzant prediccions possibles per conèixer objectes, fets i fenòmens.",
+              "2.2 Buscar informació de fonts digitals i analògiques, segures i fiables, seleccionades de manera pautada per utilitzar-la en investigacions relacionades amb el coneixement del medi.",
+              "2.3 Planificar experiments amb ajuda, usant tècniques d’indagació, i fer servir instruments simples de forma segura per registrar les observacions i les dades per respondre la pregunta plantejada.",
+              "2.4 Comparar i relacionar les informacions i els resultats obtinguts amb les prediccions realitzades per formular possibles respostes a les qüestions plantejades.",
+              "2.5 Comunicar el resultat de les investigacions realitzades de manera oral, corporal i gràfica explicant el procés seguit amb ajuda d’un guió."
+            ]
+          },
+          {
+            "name": "3. Resoldre problemes i reptes generant cooperativament un producte creatiu i innovador a partir de projectes interdisciplinaris, utilitzant diferents formes de raonament, com el pensament de disseny i el pensament computacional, per respondre a necessitats concretes.",
+            "assessment-criteria": [
+              "3.1 Reconèixer necessitats o identificar reptes concrets de l’entorn proper i participar en projectes interdisciplinaris cooperatius, de manera guiada, per a la creació de prototips que els resolguin.",
+              "3.2 Aportar idees que puguin donar resposta a un problema o necessitat d’acord amb diferents formes de raonament, com el pensament de disseny o el pensament computacional, compartint-les a través de descripcions orals, representacions i models i establir cooperativament criteris per avaluar el projecte i la gestió del treball conjunt.",
+              "3.3 Construir un producte final senzill que solucioni un repte o necessitat d’acord amb diferents formes de raonament, com el pensament de disseny o el pensament computacional i provant, en equip, els diferents prototips fent ús de forma segura de les eines i els materials adequats.",
+              "3.4 Mostrar, de forma oral o gràfica, el producte final explicant el procés seguit, amb ajuda d’un guió."
+            ]
+          },
+          {
+            "name": "4. Conèixer i prendre consciència del propi cos, de les emocions i sentiments propis i aliens, a partir de l’adquisició d’hàbits fonamentats en coneixements científics, per aconseguir el benestar físic i emocional i afavorir la convivència.",
+            "assessment-criteria": [
+              "4.1 Reconèixer i adoptar hàbits de vida saludable seguint pautes donades sobre higiene, alimentació variada i equilibrada, exercici físic i descans.",
+              "4.2 Prendre decisions personals sobre alimentació, higiene i salut a partir de coneixements i criteris científics bàsics, per a la prevenció i guariment de malalties pròpies i usuals.",
+              "4.3 Diferenciar accions que afavoreixin el benestar i equilibri emocional i social, reconeixent les emocions pròpies i alienes per generar relacions de respecte."
+            ]
+          },
+          {
+            "name": "5. Analitzar les característiques de diferents elements o sistemes del medi natural, social i cultural, identificant la seva organització i propietats, establint relacions entre aquests, per tal de reconèixer el valor del patrimoni cultural i natural i emprendre accions per a un ús responsable, la seva conservació i la millora.",
+            "assessment-criteria": [
+              "5.1 Reconèixer les característiques, propietats i l’organització dels elements del medi natural, social i cultural a través de metodologies d’indagació i utilitzant les eines i processos adequats de manera pautada.",
+              "5.2 Reconèixer connexions directes entre diferents elements del medi natural, social i cultural.",
+              "5.3 Mostrar actituds de respecte cap al patrimoni natural i cultural  reconeixent-lo com un bé comú."
+            ]
+          },
+          {
+            "name": "6. Analitzar críticament les causes i conseqüències de la intervenció humana en l’entorn integrant els vessants social, econòmic, cultural, tecnològic i ambiental definits en els objectius de desenvolupament sostenible, per tal de promoure la capacitat d’afrontar els problemes, aportar solucions i actuar de manera individual i col·laborativa en la seva resolució, posant en pràctica hàbits de vida i de consum responsable i sostenible.",
+            "assessment-criteria": [
+              "6.1 Identificar la relació de l’ésser humà amb el món que l’envolta en l’ús i aprofitament dels elements i recursos de l’entorn.",
+              "6.2 Participar en activitats que permeten avançar cap als objectius de desenvolupament sostenible de manera conscient i contextualitzada.",
+              "6.3 Mostrar comportaments i actituds de vida sostenible, conseqüents amb el respecte, la cura i la protecció del planeta."
+            ]
+          },
+          {
+            "name": "7. Observar, detectar, comprendre i interpretar canvis i continuïtats del medi natural, social i cultural, analitzant relacions de causalitat, simultaneïtat i successió, per explicar i valorar les relacions entre diferents elements i esdeveniments que permeten entendre el present i imaginar futurs possibles.",
+            "assessment-criteria": [
+              "7.1 Detectar i contextualitzar temporalment esdeveniments propis i propers emprant nocions de mesura i successió bàsiques.",
+              "7.2 Observar i detectar canvis i continuïtats del medi en l’entorn proper en el pas del temps.",
+              "7.3 Mostrar curiositat per la vida quotidiana de les persones al llarg del temps."
+            ]
+          },
+          {
+            "name": "8. Reconèixer, valorar i defensar la diversitat i la igualtat de gènere reflexionant sobre qüestions ètiques i mostrant empatia i respecte, per tal de construir una societat diversa i equitativa i contribuir al benestar individual i col·lectiu i a la consecució dels valors dels drets humans.",
+            "assessment-criteria": [
+              "8.1 Mostrar actituds que fomenten l’equitat, la igualtat de gènere i les conductes no sexistes reconeixent models positius en l’entorn pròxim.",
+              "8.2 Promoure actituds d’equitat, igualtat de gènere i conductes no sexistes, detectant i contrastant diferents models en l’entorn pròxim.",
+              "8.3 Reconèixer les manifestacions i la diversitat cultural des d’una perspectiva de gènere."
+            ]
+          },
+          {
+            "name": "9. Participar en la vida social de manera eficaç i constructiva respectant i aprofundint en el desenvolupament dels drets humans i dels infants i de les minories, per tal d’aconseguir una ciutadania activa, responsable i implicad",
+            "assessment-criteria": [
+              "9.1 Participar en l’entorn social i en la comunitat escolar, de manera assertiva i constructiva, amb responsabilitat i utilitzant un llenguatge inclusiu i no violent.",
+              "9.2 Respectar les persones, valorant la seva diversitat i riquesa, i apreciant-la com a font d’aprenentatge.",
+              "9.3 Conèixer i interioritzar normes bàsiques de circulació, com a vianants i usuaris dels mitjans de locomoció implicats en el desenvolupament sostenible de la mobilitat de les persones."
+            ]
+          },
+          {
+            "name": "10. Valorar el funcionament de les administracions públiques, a partir dels principis i els valors que es desprenen de l’ordenament jurídic que regula la nostra convivència, per protegir els drets civils i polítics i generar interaccions respectuoses i equitatives promovent la resolució pacífica i dialogada dels conflictes.",
+            "assessment-criteria": [
+              "10.1 Identificar institucions properes, assenyalant i valorant les funcions desenvolupades que promouen una bona convivència.",
+              "10.2 Conèixer els propis drets i deures per promoure la cohesió social i els valors de la cultura de la pau."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Arts",
+        "specific-competences": [
+          {
+            "name": "1. Descobrir propostes artístiques de diferents cultures, èpoques i estils, mitjançant la percepció i la vivència, per desenvolupar la curiositat, el respecte i el gaudi.",
+            "assessment-criteria": [
+              "1.1 Descobrir obres de manifestacions culturals i artístiques de diferents gèneres i estils, èpoques i cultures amb visió de perspectiva de gènere, evidenciant interès, curiositat i gaudi cap a aquestes, a través de la percepció i la vivència.",
+              "1.2 Descriure manifestacions culturals i artístiques en diferents contextos a partir de l’exploració de les característiques amb actitud oberta i interès."
+            ]
+          },
+          {
+            "name": "2. Investigar i analitzar diferents manifestacions culturals i artístiques i els seus contextos emprant diversos canals i mitjans d’accés a la informació, per desenvolupar el pensament propi, la identitat cultural i l’esperit crític.",
+            "assessment-criteria": [
+              "2.1 Utilitzar de forma col·laborativa les estratègies treballades per a la cerca de manifestacions culturals i artístiques, a través de canals i mitjans d’accés a la informació.",
+              "2.2 Identificar múltiples lectures, tècniques i/o elements de diferents manifestacions culturals i artístiques que formen part del patrimoni de diversos entorns, i trobar diferències i similituds entre elles amb respecte i interès.",
+              "2.3 Identificar i expressar les sensacions i emocions produïdes per diferents manifestacions culturals i artístiques de manera respectuosa i dialogant."
+            ]
+          },
+          {
+            "name": "3. Experimentar i crear amb les possibilitats del so, la imatge, el cos i els mitjans digitals i multimodals, mitjançant activitats i experiències que incorporin l’aprenentatge autoregulat per expressar i comunicar coneixements, idees, sentiments i emocions.",
+            "assessment-criteria": [
+              "3.1 Experimentar algunes possibilitats expressives i comunicatives del cos i de diferents eines d’expressió dels llenguatges artístics, a través de l’aplicació pràctica, mostrant confiança en les pròpies capacitats.",
+              "3.2 Expressar idees, coneixements, sentiments i emocions amb creacions pròpies fent servir aprenentatges dels referents artístics treballats.",
+              "3.3 Compartir creacions personals, evidenciant empatia i respecte envers les dels altres i acceptant-ne les diferents lectures i interpretacions."
+            ]
+          },
+          {
+            "name": "4. Dissenyar, elaborar i difondre creacions culturals i artístiques col·laboratives, assumint diferents rols, posant en valor el procés, per desenvolupar la creativitat, el sentit de pertinença i arribar a un resultat final.",
+            "assessment-criteria": [
+              "4.1 Participar en el procés de disseny de produccions culturals i creacions artístiques col·laboratives treballant en la consecució d’un resultat final que compleixi uns objectius acordats mitjançant un enfocament coeducatiu, basat en la igualtat i la perspectiva de gènere, i en el respecte a la diversitat cultural.",
+              "4.2 Participar activament, experimentant diferents rols en el procés de creació, utilitzant elements de diferents llenguatges artístics, mostrant interès i respecte.",
+              "4.3 Compartir les experiències creatives, gaudint del resultat final obtingut, identificant les parts del procés creatiu realitzat i valorant les opinions i sensacions dels altres."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Civics, Ethics",
+        "specific-competences": [
+          {
+            "name": "1. Identificar aspectes vinculats a la pròpia identitat i a les qüestions ètiques relatives a un mateix, en el seu entorn proper, buscant la informació a l’abast i interpretant-la de forma reflexiva i crítica per promoure l’autoconeixement i el desenvolupament de l’autonomia moral.",
+            "assessment-criteria": ["1.1  -no aplicable-"]
+          },
+          {
+            "name": "2. Actuar i interactuar atenent a normes i valors cívics i ètics, reflexionant sobre la seva importància per a la vida individual i col·lectiva, per aplicar-los de manera efectiva i argumentada en diferents contextos i amb la finalitat de promoure una convivència pacífica, respectuosa, democràtica i justa.",
+            "assessment-criteria": ["2.1  -no aplicable-"]
+          },
+          {
+            "name": "3. Interpretar les relacions sistèmiques entre l’individu, la societat i la natura, així com la importància de l’acció local i les seves conseqüències en l’entorn proper, per desenvolupar un paper actiu i conseqüent amb el respecte, la cura i la protecció de les persones i del planeta.",
+            "assessment-criteria": ["3.1  -no aplicable-"]
+          },
+          {
+            "name": "4. Desenvolupar l’autoestima i l’estima de l’entorn, a partir de la identificació, expressió i gestió de les emocions i sentiments propis i reconeixent i valorant els dels altres, amb la finalitat d’assolir una actitud empàtica i respectuosa envers un mateix, els altres i la natura.",
+            "assessment-criteria": ["4.1  -no aplicable-"]
+          }
+        ]
+      },
+      {
+        "name": "Foreign Language",
+        "specific-competences": [
+          {
+            "name": "1. Comprendre la diversitat lingüística i cultural a partir del reconeixement de les llengües de l’alumnat i la realitat plurilingüe, pluricultural i intercultural, per afavorir la transferència lingüística, identificar i rebutjar estereotips i prejudicis lingüístics, i valorar aquesta diversitat com a font de riquesa cultural.",
+            "assessment-criteria": [
+              "1.1 Participar amb respecte en la comunicació intercultural, identificant i analitzant, de forma guiada, les discriminacions, els prejudicis i els estereotips més comuns, en situacions quotidianes i habituals.",
+              "1.2 Reconèixer i valorar la diversitat lingüística i cultural relacionada amb la llengua estrangera, identificant els seus elements culturals i lingüístics elementals."
+            ]
+          },
+          {
+            "name": "2. Comprendre i interpretar textos orals i multimodals breus i senzills, en la llengua estàndard, i identificar el sentit general i la informació més rellevant, valorant, de manera progressivament autònoma, aspectes formals i de contingut bàsics, per construir coneixement, formar-se una opinió i eixamplar les possibilitats de gaudi i lleure.",
+            "assessment-criteria": [
+              "2.1 Reconèixer i comprendre paraules i expressions habituals en textos orals i multimodals breus i senzills sobre temes freqüents i quotidians de rellevància personal i pròxims a la pròpia experiència, expressats de forma entenedora, clara, senzilla i directa, en llengua estàndard i en diferents suports. ",
+              "2.2 Seleccionar i aplicar de forma guiada estratègies elementals per captar la idea global i identificar elements específics amb ajuda d’elements lingüístics i no lingüístics del context, en situacions comunicatives quotidianes i de rellevància per a l’alumnat."
+            ]
+          },
+          {
+            "name": "3. Produir textos orals i multimodals amb coherència, claredat i registre adequats, atenent les convencions pròpies dels diferents gèneres discursius, i participar en interaccions orals variades, amb autonomia, per expressar idees, sentiments i conceptes, construir coneixement i establir vincles personals.",
+            "assessment-criteria": [
+              "3.1 Expressar oralment frases curtes amb informació bàsica sobre assumptes quotidians i de rellevància per a l’alumnat, utilitzant de forma guiada recursos verbals i no verbals, a partir de models i estructures prèviament presentats i parant atenció al ritme, l’accentuació i l’entonació.",
+              "3.2 Seleccionar i aplicar de forma guiada estratègies bàsiques per produir missatges breus i senzills adequats a les intencions comunicatives utilitzant, amb ajuda, recursos i suports físics o digitals en funció de les necessitats de cada moment.",
+              "3.3 Participar, de forma guiada, en situacions interactives elementals sobre temes quotidians, preparats prèviament, a través de diversos suports, com ara la repetició, el ritme pausat o el llenguatge no verbal, i mostrant empatia.",
+              "3.4 Seleccionar i utilitzar, de forma guiada i en entorns propers, estratègies elementals per saludar, acomiadar-se i presentar-se, expressar missatges senzills i breus, i formular i contestar preguntes bàsiques per a la comunicació."
+            ]
+          },
+          {
+            "name": "4. Comprendre i interpretar textos escrits i multimodals, reconeixent el sentit global, les idees principals i la informació implícita i explícita, i realitzant, de manera progressivament autònoma, reflexions elementals sobre aspectes formals i de contingut, per adquirir i construir coneixement, i respondre a necessitats i interessos comunicatius diversos.",
+            "assessment-criteria": [
+              "4.1 Reconèixer i comprendre paraules i expressions habituals en textos escrits i multimodals breus i senzills sobre temes freqüents i quotidians de rellevància personal i pròxims a la pròpia experiència, expressats de forma entenedora, clara, senzilla i directa, i en llengua estàndard.",
+              "4.2 Seleccionar i aplicar, de forma guiada, estratègies elementals en situacions comunicatives quotidianes i de rellevància per a l’alumnat que permetin captar la idea global i identificar elements específics amb ajuda d’elements lingüístics i no lingüístics."
+            ]
+          },
+          {
+            "name": "5. Produir textos escrits i multimodals amb adequació, coherència i cohesió, aplicant estratègies elementals de planificació, redacció, revisió, correcció i edició, amb regulació dels iguals i autoregulació progressivament autònoma i atenent les convencions pròpies del gènere discursiu triat, per construir coneixement i donar resposta de manera informada, eficaç i creativa a demandes comunicatives concretes.",
+            "assessment-criteria": [
+              "5.1 Escriure paraules, expressions conegudes i frases, sobre assumptes quotidians i de rellevància personal per a l’alumnat, a partir de models, i amb una finalitat específica, a través d’eines analògiques i digitals, utilitzant estructures i lèxic elemental.",
+              "5.2 Seleccionar i aplicar de forma guiada estratègies bàsiques per produir missatges breus i senzills adequats a les intencions comunicatives utilitzant, amb ajuda, recursos i suports físics o digitals en funció de les necessitats de cada moment."
+            ]
+          },
+          {
+            "name": "6. Cercar, seleccionar i contrastar informació procedent de diverses fonts, de forma planificada i de manera progressivament autònoma, avaluant la seva fiabilitat, reconeixent alguns riscos de manipulació i desinformació i adoptant un punt de vista personal i respectuós amb la propietat intel·lectual, per transformar-la en coneixement i comunicar-la de manera creativa.",
+            "assessment-criteria": [
+              "6.1 Aplicar estratègies de cerca d’informació (localització, selecció i contrast) en diferents fonts, incloses les digitals, sobre temes propers i d’interès personal, de forma guiada, a la xarxa i a les biblioteques.",
+              "6.2 Comunicar els resultats d’un procés d’investigació, individual o grupal, realitzat de forma acompanyada, sobre temes propers i d’interès personal.",
+              "6.3 Adoptar hàbits d’ús segur i saludable de les tecnologies digitals de forma guiada en relació amb l’accés a la informació i a la comunicació en l’entorn immediat."
+            ]
+          },
+          {
+            "name": "7. Seleccionar i llegir de manera autònoma obres diverses atenent els propis gustos i interessos, compartint les experiències de lectura, per iniciar la construcció de la identitat lectora, fomentar el gust per la lectura com a font de plaer i gaudir de la seva dimensió social.",
+            "assessment-criteria": [
+              "7.1 Llegir de manera autònoma textos de diferents autors i autores que s’adeqüin als propis gustos i interessos, seleccionats de manera acompanyada, des de les diferents etapes del procés evolutiu de la lectura.",
+              "7.2 Compartir lectures, per mitjà de recomanacions, presentacions i a partir d’interaccions orals, en el marc de la biblioteca d’aula i de centre, per expressar gustos i interessos i iniciar-se en una comunitat lectora."
+            ]
+          },
+          {
+            "name": "8. Mediar entre diferents llengües en situacions predictibles, utilitzant estratègies i coneixements per processar i transmetre informació bàsica i senzilla, per tal de facilitar la comunicació.",
+            "assessment-criteria": [
+              "8.1 Interpretar i explicar informació bàsica de conceptes, comunicacions i textos breus i senzills, de manera guiada, en situacions de comunicació de diversitat lingüística, social i cultural, mostrant empatia i interès per entendre’s en un entorn immediat."
+            ]
+          },
+          {
+            "name": "9. Reflexionar de forma guiada sobre el llenguatge i reconèixer i usar els repertoris lingüístics personals i a partir de processos de comprensió i producció de textos orals, escrits i multimodals, utilitzant la terminologia elemental adequada, per iniciar-se en el desenvolupament de la consciència lingüística i millorar les destreses en la posada en pràctica d’aquests processos.",
+            "assessment-criteria": [
+              "9.1 Comparar i contrastar similituds i diferències evidents entre llengües, reflexionant, de manera guiada, sobre aspectes elementals del seu funcionament.",
+              "9.2 Identificar i aplicar, de forma guiada, els coneixements i estratègies que formen el propi repertori lingüístic, per millorar la capacitat de comunicar i d’aprendre la llengua estrangera, amb suport d’altres participants i de suports analògics i digitals.",
+              "9.3 Identificar i explicar, de manera guiada, progressos i dificultats elementals d’aprenentatge de la llengua estrangera."
+            ]
+          },
+          {
+            "name": "10. Posar al servei de la convivència democràtica, la resolució dialogada dels conflictes i la igualtat de drets de totes les persones les pròpies pràctiques comunicatives, utilitzant un llenguatge no discriminatori i desterrant els abusos de poder a través de la paraula, per afavorir un ús eficaç, ètic i democràtic del llenguatge.",
+            "assessment-criteria": [
+              "10.1 Rebutjar els usos lingüístics discriminatoris identificats a partir de la reflexió grupal acompanyada sobre els aspectes elementals, verbals i no verbals, que regeixen la comunicació, i tenint en compte la perspectiva de gènere.",
+              "10.2 Utilitzar, amb l’acompanyament i planificació necessaris, estratègies elementals per a l’escolta activa i el consens, iniciant-se en la gestió dialogada de conflictes."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Foreing Language 2",
+        "specific-competences": [
+          {
+            "name": "1. Comprendre la diversitat lingüística i cultural a partir del reconeixement de les llengües de l’alumnat i la realitat plurilingüe, pluricultural i intercultural per afavorir la transferència lingüística, identificar i rebutjar estereotips i prejudicis lingüístics, i valorar aquesta diversitat com a font de riquesa cultural.",
+            "assessment-criteria": [
+              "1.1 Participar amb respecte en situacions interculturals, identificant i comparant semblances i diferències elementals entre llengües i cultures, i mostrant rebuig davant discriminacions, prejudicis i estereotips de qualsevol tipus en contextos comunicatius quotidians i habituals.",
+              "1.2 Reconèixer, comprendre i valorar la diversitat lingüística i cultural pròpia de països on es parla la llengua estrangera, identificant elements culturals i lingüístics elementals que fomentin la cultura de la pau.",
+              "1.3 Seleccionar i aplicar, de forma guiada, estratègies elementals per a la comprensió dels aspectes més rellevants de la diversitat lingüística i cultural."
+            ]
+          },
+          {
+            "name": "2. Comprendre i interpretar textos orals i multimodals breus i senzills, i en la llengua estàndard, i identificar el sentit general i la informació més rellevant, valorant, de manera progressivament autònoma, aspectes formals i de contingut bàsics, per construir coneixement, formar-se una opinió i eixamplar les possibilitats de gaudi i lleure.",
+            "assessment-criteria": [
+              "2.1 Reconèixer i comprendre paraules, frases així com el sentit global de textos orals i multimodals breus i senzills sobre temes freqüents i quotidians de rellevància personal i pròxims a la seva experiència, així com de textos de ficció adequats al nivell de desenvolupament de l’alumnat, expressats de forma entenedora, clara i en llengua estàndard a través de diferents suports.",
+              "2.2 Seleccionar i aplicar de forma guiada estratègies elementals en situacions comunicatives quotidianes i de rellevància per a l’alumnat per captar el sentit global i processar informacions explícites en textos breus i senzills sobre temes familiars."
+            ]
+          },
+          {
+            "name": "3. Produir textos orals i multimodals amb coherència, claredat i registre adequats, atenent les convencions pròpies dels diferents gèneres discursius, i participar en interaccions orals variades, amb autonomia, per expressar idees, sentiments i conceptes; construir coneixement; establir vincles personals.",
+            "assessment-criteria": [
+              "3.1 Expressar oralment frases curtes amb informació bàsica sobre assumptes quotidians i de rellevància per a l’alumnat, parant atenció al ritme, l’accentuació i l’entonació.",
+              "3.2 Seleccionar i aplicar de forma guiada estratègies elementals per produir missatges breus i senzills adequats a les intencions comunicatives utilitzant, amb ajuda, recursos i suports físics o digitals en funció de les necessitats de cada moment.",
+              "3.3 Participar en situacions interactives d’intercanvis d’informació breus i senzills sobre temes quotidians, de rellevància personal i pròxims a la seva experiència, preparats prèviament, a través de diversos suports i estratègies elementals guiades, i mostrant empatia i respecte per la cortesia lingüística i l’etiqueta digital."
+            ]
+          },
+          {
+            "name": "4. Comprendre i interpretar textos escrits i multimodals, reconeixent el sentit global, les idees principals i la informació implícita i explícita, i realitzant, de manera progressivament autònoma, reflexions elementals sobre aspectes formals i de contingut, per adquirir i construir coneixement, i respondre a necessitats i interessos comunicatius diversos.",
+            "assessment-criteria": [
+              "4.1 Reconèixer i comprendre el sentit global, així com paraules i frases prèviament indicades en textos escrits i multimodals breus i molt senzills sobre temes freqüents i quotidians de rellevància personal i pròxims a la seva experiència, així com de textos de ficció adequats al nivell de desenvolupament de l’alumnat, expressats de forma entenedora, clara i en llengua estàndard a través de diferents suports.",
+              "4.2 Seleccionar i aplicar, de forma guiada, estratègies elementals en situacions comunicatives quotidianes i de rellevància per a l’alumnat per captar el sentit global i processar informacions explícites en textos breus i senzills sobre temes familiars."
+            ]
+          },
+          {
+            "name": "5. Produir textos escrits i multimodals amb adequació, coherència i cohesió, aplicant estratègies elementals de planificació, redacció, revisió, correcció i edició, amb regulació dels iguals i autoregulació progressivament autònoma i atenent les convencions pròpies del gènere discursiu triat, per construir coneixement i donar resposta de manera informada, eficaç i creativa a demandes comunicatives concretes.",
+            "assessment-criteria": [
+              "5.1 Redactar textos breus i senzills, sobre assumptes quotidians i de rellevància personal per a l’alumnat, amb adequació a la situació comunicativa proposada, a partir de models, i a través d’eines analògiques i digitals, utilitzant estructures i lèxic elemental.",
+              "5.2 Seleccionar i aplicar de forma guiada estratègies elementals per produir missatges breus i senzills adequats a les intencions comunicatives utilitzant, amb ajuda, recursos i suports físics o digitals en funció de les necessitats de cada moment."
+            ]
+          },
+          {
+            "name": "6. Cercar, seleccionar i contrastar informació procedent de diverses fonts, de forma planificada i de manera progressivament autònoma, avaluant la seva fiabilitat, reconeixent alguns riscos de manipulació i desinformació i adoptant un punt de vista personal i respectuós amb la propietat intel·lectual, per transformar-la en coneixement i comunicar-la de manera creativa.",
+            "assessment-criteria": [
+              "6.1 Aplicar estratègies de cerca d’informació (localització, selecció i contrast) en diferents fonts, incloses les digitals, sobre temes d’interès personal, amb acompanyament, a la xarxa i a les biblioteques.",
+              "6.2 Comunicar de forma creativa i respectant els drets de la propietat intel·lectual, els resultats d’un procés d’investigació, individual o grupal, realitzat de forma acompanyada, sobre temes d’interès personal, ecològic i social, que incloguin els objectius de desenvolupament sostenible.",
+              "6.3 Adoptar hàbits d’ús segur, sostenible i saludable de les tecnologies digitals, amb acompanyament, en relació amb l’accés, la fiabilitat i verificació de les fonts d’informació i la comunicació al seu entorn immediat i a la xarxa."
+            ]
+          },
+          {
+            "name": "7. Seleccionar i llegir de manera autònoma obres diverses atenent els propis gustos i interessos, compartint les experiències de lectura, per iniciar la construcció de la identitat lectora, fomentar el gust per la lectura com a font de plaer i gaudir de la seva dimensió social.",
+            "assessment-criteria": [
+              "7.1 Llegir de manera acompanyada textos que s’adeqüin als seus gustos i interessos, avançant en la construcció de la seva identitat lectora.",
+              "7.2 Compartir lectures per mitjà de recomanacions, presentacions i a partir interaccions orals elementals, en el marc de la biblioteca d’aula i de centre, per expressar gustos i interessos i per sentir-se membre d’una comunitat lectora."
+            ]
+          },
+          {
+            "name": "8. Mediar entre diferents llengües en situacions predictibles, utilitzant estratègies i coneixements per processar i transmetre informació bàsica i senzilla, per tal de facilitar la comunicació.",
+            "assessment-criteria": [
+              "8.1 Interpretar i explicar textos, conceptes i comunicacions breus i senzills, de manera guiada, en situacions de comunicació de diversitat lingüística d’aula, mostrant empatia i interès per entendre’s en el seu entorn més proper.",
+              "8.2 Seleccionar i aplicar, de forma guiada, estratègies elementals que ajudin a crear ponts i que facilitin la comprensió i producció d’informació, així com la comunicació, fent servir, amb ajuda, recursos i suports físics o digitals en funció de les necessitats de cada moment."
+            ]
+          },
+          {
+            "name": "9. Reflexionar de forma guiada sobre el llenguatge i reconèixer i usar els repertoris lingüístics personals i a partir de processos de comprensió i producció de textos orals, escrits i multimodals, utilitzant la terminologia elemental adequada per iniciar-se en el desenvolupament de la consciència lingüística i millorar les destreses en la posada en pràctica d’aquests processos.",
+            "assessment-criteria": [
+              "9.1 Comparar les similituds i diferències entre llengües, reflexionant, de manera guiada, sobre aspectes bàsics del seu funcionament.",
+              "9.2 Utilitzar i diferenciar, de forma guiada, els coneixements i estratègies que formen el propi repertori lingüístic, per millorar la capacitat de comunicar i d’aprendre la llengua estrangera, amb suport d’altres participants i de suports analògics i digitals.",
+              "9.3 Identificar i aplicar, de manera guiada, els progressos i dificultats elementals d’aprenentatge de la llengua estrangera, reconeixent els aspectes que ajuden a millorar i participant en activitats d’autoavaluació i coavaluació."
+            ]
+          },
+          {
+            "name": "10. Posar al servei de la convivència democràtica, la resolució dialogada dels conflictes i la igualtat de drets de totes les persones, les pròpies pràctiques comunicatives, utilitzant un llenguatge no discriminatori i desterrant els abusos de poder a través de la paraula per afavorir un ús no solament eficaç sinó també ètic i democràtic del llenguatge.",
+            "assessment-criteria": [
+              "10.1 Rebutjar els usos lingüístics discriminatoris i identificar els abusos de poder a través de la paraula mitjançant la reflexió grupal acompanyada sobre els aspectes bàsics, verbals i no verbals, que regeixen la comunicació, i tenint en compte la perspectiva de gènere.",
+              "10.2 Utilitzar, amb l’acompanyament i planificació necessaris, estratègies bàsiques per a la comunicació i l’entesa. "
+            ]
           }
         ]
       }
     ],
     "key-competences": [
       {
-        "name": "Citizenship competence",
+        "name": "Citizenship",
         "specific-competences": [
           {
-            "name": "1. Identificar els fets històrics i socials més rellevants relatius a la seva pròpia identitat i cultura, reflexionar sobre les normes de convivència i aplicar-les de manera constructiva, dialogant i inclusiva en qualsevol context.",
+            "name": "1. Identificar els fets històrics i socials més rellevants relatius a la seva pròpia identitat i cultura, reflexionar sobre les normes de convivència i aplicar-les de manera constructiva, dialogant i inclusiva en qualsevol Context.",
             "assessment-criteria": [
-              "1.1 Registrar canvis importants que s’han produït en l’àmbit personal, familiar, a l’escola o al barri que han influït en la construcció de la pròpia identitat.",
-              "1.2 Identificar la diversitat cultural present a l’aula i al centre educatiu, reconeixent i respectant les diferents expressions culturals.",
-              "1.3 Identificar les necessitats, desitjos, sentiments i valors propis i de les altres persones, així com algunes de les habilitats socials necessàries per a la convivència a l’aula."
+              "1.1. Registrar canvis importants que s’han produït en l’àmbit personal, familiar, a l’escola o al barri que han influït en la construcció de la pròpia identitat.",
+              "1.2. Identificar la diversitat cultural present a l’aula i al centre educatiu, reconeixent i respectant les diferents expressions culturals.",
+              "1.3. Identificar les necessitats, desitjos, sentiments i valors propis i de les altres persones, així com algunes de les habilitats socials necessàries per a la convivència a l’aula."
             ]
           },
           {
             "name": "2. Participar en activitats comunitàries, en la presa de decisions i la resolució dels conflictes de forma dialogada i respectuosa amb els procediments democràtics en el marc de la Unió Europea, de l’ordenament jurídic de l’Estat espanyol i Catalunya, dels drets humans i de l’infant, i del valor de la diversitat i l’assoliment de la igualtat de gènere, la cohesió social i els objectius de desenvolupament sostenible",
             "assessment-criteria": [
-              "2.1 Participar en la presa de decisions col·lectives, tenint en compte les aportacions d’altres membres del grup.",
-              "2.2 Participar en la comunitat escolar (grup classe, cicle…) i en l’entorn social, de manera assertiva i constructiva, utilitzant un llenguatge inclusiu i no violent."
+              "2.1. Participar en la presa de decisions col·lectives, tenint en compte les aportacions d’altres membres del grup.",
+              "2.2. Participar en la comunitat escolar (grup classe, cicle…) i en l’entorn social, de manera assertiva i constructiva, utilitzant un llenguatge inclusiu i no violent."
+            ]
+          },
+          {
+            "name": "3. Reflexionar i dialogar sobre valors i problemes ètics d’actualitat, comprenent la necessitat de respectar diferents cultures i creences, cuidar l’entorn, rebutjar prejudicis i estereotips, i oposar-se a qualsevol forma de discriminació i violència —incloent-hi la violència masclista, LGTBI-fòbica, racista o capacitista— o fonamentalisme ideològic.",
+            "assessment-criteria": [
+              "3.1. Identificar situacions o comportaments d’equitat,d’igualtat de gènere i de conductes no sexistes reconeixent referents diversos, en l’entorn pròxim",
+              "3.2  -no aplicable- ",
+              "3.3. Respectar i tenir cura de les persones de l’entorn proper, valorant-ne la diversitat i riquesa, i demostrant empatia i consideració cap a les diferents capacitats, experiències i perspectives."
+            ]
+          },
+          {
+            "name": "4. Identificar les relacions sistèmiques entre les accions humanes i l’entorn i iniciar-se en l’adopció d’hàbits de vida sostenibles, per contribuir a la conservació de la biodiversitat des d’una perspectiva tant local com global.",
+            "assessment-criteria": [
+              "4.1. Analitzar la intervenció humana en els elements de l’entorn proper, identificant connexions directes entre els diferents elements del medi natural, social i cultural.",
+              "4.2. Mostrar comportaments i actituds de vida sostenible, conseqüents amb el respecte, la cura i la protecció de les persones i el patrimoni natural i cultural, i reconeixent aquest patrimoni com un bé comú."
             ]
           }
         ]
       },
       {
-        "name": "Digital competence",
+        "name": "Digital",
         "specific-competences": [
           {
             "name": "1. Fer cerques guiades a Internet i usar estratègies senzilles per al tractament digital de la informació (paraules clau, selecció d’informació rellevant, organització de dades, etc.) amb una actitud crítica sobre els continguts que s’obtenen.",
             "assessment-criteria": [
-              "1.1 Trobar, de manera guiada, dades, informació i continguts a través d’una cerca en entorns digitals, que doni resposta a la necessitat inicial."
+              "1.1. Trobar, de manera guiada, dades, informació i continguts a través d’una cerca en entorns digitals, que doni resposta a la necessitat inicial."
             ]
           },
           {
             "name": "2. Crear, integrar i reelaborar continguts digitals en diferents formats (text, taula, imatge, àudio, vídeo, programa informàtic, etc.) mitjançant l’ús de diferents eines digitals per expressar idees, sentiments i coneixements, respectant la propietat intel·lectual i els drets d’autor dels continguts que es reutilitzen.",
             "assessment-criteria": [
-              "2.1 Crear i editar documents i presentacions pròpies utilitzant les eines de format (processador de textos i aplicacions) en activitats dirigides pel o per la docent.",
-              "2.2 Crear vídeos, imatges i àudios (sense edició) i programmes informàtics senzills, en activitats basades en un context real i proper dirigides pel o per la docent."
+              "2.1. Crear i editar documents i presentacions pròpies utilitzant les eines de format (processador de textos i aplicacions) en activitats dirigides pel o per la docent.",
+              "2.2. Crear vídeos, imatges i àudios (sense edició) i programmes informàtics senzills, en activitats basades en un context real i proper dirigides pel o per la docent."
+            ]
+          },
+          {
+            "name": "3. Participar en activitats o projectes escolars mitjançant l’ús d’eines o plataformes virtuals que permetin construir nou coneixement, comunicar-se, treballar col·laborativament, compartir dades i continguts en entorns digitals restringits i supervisats de manera segura i amb una actitud oberta i responsable davant el seu ús",
+            "assessment-criteria": [
+              "3.1. Reconèixer diferents maneres de comunicació digital en situacions quotidianes.",
+              "3.2. Reconèixer diferents maneres de col·laboració digital en situacions quotidianes."
+            ]
+          },
+          {
+            "name": "4. Conèixer els riscos i adoptar, amb l’orientació del o de la docent, mesures preventives en l’ús de les tecnologies digitals per protegir els dispositius, les dades personals, la salut i el medi ambient, i iniciar-se en l’adopció d’hàbits d’ús crític, segur, saludable i sostenible d’aquestes tecnologies.",
+            "assessment-criteria": [
+              "4.1. Adoptar mesures de seguretat dels comptes i dels dispositius en entorns personals i educatius generant contrasenyes simples i tancant les sessions.",
+              "4.2  -no aplicable-  ",
+              "4.3  -no aplicable- ",
+              "4.4. Prendre consciència de la necessitat de mantenir una postura saludable en l’ús de la tecnologia.",
+              "4.5  -no aplicable- ",
+              "4.6. Aplicar, de manera guiada, accions concretes dins de l’aula per preservar la sostenibilitat dels recursos digitals (apagar l’ordinador i les pantalles quan no s’utilitzen, regular la lluminositat de la pantalla, etc.)."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Entrepreneurship",
+        "specific-competences": [
+          {
+            "name": "1. Reconèixer necessitats i reptes a afrontar i elaborar idees originals utilitzant destreses creatives i prenent consciència de les conseqüències i efectes que les idees puguin provocar en l’entorn per proposar solucions valuoses que responguin a les necessitats detectades.",
+            "assessment-criteria": [
+              "1.1. Identificar necessitats o reptes concrets de l’entorn proper amb l’acompanyament de  l’adult i experts.",
+              "1.2. Participar en la creació d’idees que aportin solucions al repte.",
+              "1.3. Escollir una idea que doni resposta al repte, tenint-ne encompte els punts forts i els punts febles."
+            ]
+          },
+          {
+            "name": "2. Identificar fortaleses i debilitats pròpies mitjançant estratègies d’autoconeixement i iniciar-se en el coneixement d’elements econòmics i financers bàsics aplicant-los a situacions i problemes de la vida quotidiana per detectar aquells recursos que puguin posar idees originals i valuoses en acció.",
+            "assessment-criteria": [
+              "2.1. Afrontar experiències i reptes de la vida quotidiana, reconeixent, amb ajuda, les pròpies fortaleses i debilitats",
+              "2.2. Observar, amb l’ajuda de l’adult, solucions a reptes similars en l’entorn proper, que puguin ajudar a desenvolupar la idea pròpia.",
+              "2.3. Detallar la idea cooperativament, de forma verbal o visual, tenint present els materials i les persones necessàries per portar-la a terme, i prenent consciència de la despesa que suposa."
+            ]
+          },
+          {
+            "name": "3. Crear idees i solucions originals, planificar tasques i cooperar amb altres i en equip, valorant el procés realitzat i el resultat obtingut, per dur a terme una iniciativa emprenedora, considerant l’experiència com una oportunitat per aprendre.",
+            "assessment-criteria": [
+              "3.1. Organitzar, amb l’ajuda de l’adult, els passos que s’han de seguir per tal desenvolupar la idea triada.",
+              "3.2. Participar activament en l’execució del projecte emprenedor seguint la planificació.",
+              "3.3. Explicar els passos que s’han seguit a l’hora de tirar endavant el projecte per tal d’avaluar com ha anat."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Personal Learning",
+        "specific-competences": [
+          {
+            "name": "1. Conèixer les pròpies emocions, idees i comportaments personals i emprar estratègies per gestionar- los en situacions de tensió o conflicte, adaptant-se als canvis i harmonitzant-los per assolir els seus objectius.",
+            "assessment-criteria": [
+              "1.1. Identificar i expressar les emocions, les idees i els sentiments en els diversos contextos educatius",
+              "1.2. Emprar, amb ajuda, algunes estratègies per a la gestió de les emocions,3 les idees i els comportaments en el dia a dia de l’escola."
+            ]
+          },
+          {
+            "name": "2. Conèixer els riscos més rellevants per a la salut i començar a adoptar hàbits saludables per al seu benestar físic i mental.",
+            "assessment-criteria": [
+              "2.1. Anomenar els hàbits de vida saludable bàsics  i la seva vinculació i importància amb el benestar físic i emocional.",
+              "2.2. Adoptar, amb suport del o de la docent, comportaments i hàbits de vida saludable en diverses situacions del context educatiu, valorant la importància del benestar físic i emocional."
+            ]
+          },
+          {
+            "name": "3. Reconèixer i respectar les emocions i experiències dels altres, participar activament en el treball en grup, assumir les responsabilitats individuals assignades i utilitzar estratègies cooperatives dirigides a la consecució d’objectius compartits",
+            "assessment-criteria": [
+              "3.1. Identificar i respectar les emocions i les experiències dels altres iniciant-se en l’ús d’estratègies d’escolta activa.",
+              "3.2. Participar en el treball en equip, escoltant i respectant les aportacions de les altres persones."
+            ]
+          },
+          {
+            "name": "4. Reconèixer el valor de l’esforç i la dedicació personal per a la millora de l’aprenentatge i adoptar posicions crítiques quan es produeixen processos de reflexió guiats.",
+            "assessment-criteria": [
+              "4.1. Reconèixer, de manera guiada, les pròpies fortaleses i els aspectes que estan en procés de millora, fent ús de la retroacció rebuda sobre el fer, no sobre el ser.",
+              "4.2. Iniciar-se en la resolució dels reptes d’aprenentatge en situacions d’aula amb esforç, demanant suport després d’haver-ho intentat de forma autònoma.",
+              "4.3. Enumerar de forma guiada les diverses posicions que es poden adoptar respecte a una mateixa situació sobre la qual es vulgui reflexionar, mostrant respecte i interès.",
+              "4.4. Diferenciar, amb modelatge, si una informació rebuda és certa o no, tant en els aprenentatges escolars com en les relacions personals en el context educatiu."
+            ]
+          },
+          {
+            "name": "5. Planificar objectius a curt termini, utilitzar estratègies d’aprenentatge autoregulat i participar en processos d’autoavaluació i coavaluació, reconeixent les limitacions i sabent buscar ajuda en el procés de construcció de coneixement.",
+            "assessment-criteria": [
+              "5.1. Mostrar, amb acompanyament del o de la docent, que ha entès els objectius d’aprenentatge, a través de diferents llenguatges (verbal, gràfic, corporal, etc.) iniciant-se en els processos de metacognició.",
+              "5.2 – no aplicable-",
+              "5.3. Fer servir, amb modelatge de l’adult, algunes estratègies d’aprenentatge que millorin la comprensió i els aprenentatges a fer en contextos educatius.",
+              "5.4. Aplicar, amb modelatge, instruments i estratègies d’autoavaluació i coavaluació, en processos d’autoregulació de l’aprenentatge."
             ]
           }
         ]

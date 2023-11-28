@@ -1,11 +1,11 @@
-import { SelectProps } from '../../types/types';
+import { type SelectProps } from '../../types/types';
 
 const Select = ({
   label,
   id,
   options,
   name,
-  setSelections,
+  setSelection,
 }: SelectProps): JSX.Element => {
   const displayedOptions = options?.map((option, index) => (
     <option key={index} value={option}>
@@ -15,12 +15,7 @@ const Select = ({
 
   const handleSelect = (e: React.ChangeEvent<HTMLSelectElement>): void => {
     const selected = e.target.value;
-    setSelections(prevSelections => {
-      return {
-        ...prevSelections,
-        [e.target.name]: selected,
-      };
-    });
+    selected !== 'Choose option' ? setSelection(selected) : setSelection('');
   };
   return (
     <div className='flex flex-col md:flex-row md:justify-between md:items-center md:space-x-2'>
@@ -32,9 +27,11 @@ const Select = ({
         name={name}
         className='select select-primary select-sm border-none m-0 bg-neutral/20 w-full md:w-2/4 lg:w-3/5 text-secondary'
         defaultValue={'Choose option'}
-        onChange={e => handleSelect(e)}
+        onChange={e => {
+          handleSelect(e);
+        }}
       >
-        <option disabled>Choose option</option>
+        <option>Choose option</option>
         {displayedOptions}
       </select>
     </div>

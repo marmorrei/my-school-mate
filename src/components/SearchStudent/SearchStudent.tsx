@@ -21,7 +21,6 @@ const SearchStudent = (): JSX.Element => {
     setInput(value);
     fetchStudents()
       .then(result => {
-        console.log('Search', result);
         const foundStudents = result.filter(
           (item: { name: string; surname: string }) =>
             value !== undefined &&
@@ -30,7 +29,6 @@ const SearchStudent = (): JSX.Element => {
               item.surname.toLowerCase().includes(value.toLowerCase())),
         );
         setResults(foundStudents);
-        console.log('foundStudents', foundStudents);
       })
       .catch(error => {
         console.log(error);
