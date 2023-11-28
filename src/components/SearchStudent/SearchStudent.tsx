@@ -39,6 +39,7 @@ const SearchStudent = (): JSX.Element => {
     <div
       className='px-2.5 text-md md:text-sm hover:bg-neutral rounded-md'
       key={result.id}
+      role='option'
       onClick={() => {
         updateStudent(result);
         setResults(undefined);
