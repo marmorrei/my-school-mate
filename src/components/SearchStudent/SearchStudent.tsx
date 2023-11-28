@@ -36,7 +36,7 @@ const SearchStudent = (): JSX.Element => {
   };
 
   const displayResults = results?.map(result => (
-    <li
+    <div
       className='px-2.5 text-md md:text-sm hover:bg-neutral rounded-md'
       key={result.id}
       onClick={() => {
@@ -53,7 +53,7 @@ const SearchStudent = (): JSX.Element => {
       }}
     >
       {result.name} {result.surname}
-    </li>
+    </div>
   ));
 
   return (
@@ -68,9 +68,9 @@ const SearchStudent = (): JSX.Element => {
         className='input border-none input-primary input-sm bg-neutral/20 w-full text-primary max-w-xs'
       />
       {results !== undefined && (
-        <ul className='bg-neutral/20 w-full text-secondary cursor-default rounded-md overflow-y-scroll md:w-4/5 lg:w-2/3'>
+        <div className='bg-neutral/20 w-full text-secondary cursor-default rounded-md overflow-y-scroll md:w-4/5 lg:w-2/3'>
           {displayResults}
-        </ul>
+        </div>
       )}
     </div>
   );
