@@ -2,6 +2,7 @@ import Comments from '../Comments/Comments';
 import FileUpload from '../FileUpload/FileUpload';
 import SearchStudent from '../SearchStudent/SearchStudent';
 import {
+  useEvidenceContext,
   useKeyCompetenceContext,
   useLearningSituationContext,
   useStudentContext,
@@ -10,21 +11,115 @@ import {
 import SubjectArea from '../SubjectAreaSelect/SubjectArea';
 import KeyCompetence from '../KeyCompetenceSelect/KeyCompetence';
 import LearningSituationSelect from '../LearningSituationSelect/LearningSituationSelect';
+import { supabase } from '../../supabase/supabase';
+import { useEffect, useState } from 'react';
 
 const EvidenceCollectionForm = (): JSX.Element => {
   const { selectedStudent, updateStudent } = useStudentContext();
-  const { updateSubjectArea } = useSubjectAreaContext();
-  const { updateKeyCompetence } = useKeyCompetenceContext();
-  const { updateLearningSituation } = useLearningSituationContext();
+  const { selectedSubjectArea, updateSubjectArea } = useSubjectAreaContext();
+  const { selectedKeyCompetence, updateKeyCompetence } =
+    useKeyCompetenceContext();
+  const { selectedLearningSituation, updateLearningSituation } =
+    useLearningSituationContext();
+  const { file, updateFile, comment, updateComment } = useEvidenceContext();
+  const [userId, setUserId] = useState('');
 
+  useEffect(() => {
+    void getUser();
+  }, [userId]);
+
+  // OBTAIN USER ID
+  const getUser = async (): Promise<void> => {
+    try {
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+      if (user !== null) {
+        setUserId(user.id);
+      } else {
+        setUserId('');
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  // RESET DATA
   const resetData = (): void => {
+    console.log(
+      'Before reset:',
+      selectedStudent,
+      selectedSubjectArea,
+      selectedKeyCompetence,
+      selectedLearningSituation,
+      file,
+      comment,
+    );
+
     updateStudent(undefined);
     updateSubjectArea(undefined);
     updateKeyCompetence(undefined);
     updateLearningSituation(undefined);
+    updateFile(undefined);
+    updateComment(undefined);
+
+    console.log(
+      'After reset:',
+      selectedStudent,
+      selectedSubjectArea,
+      selectedKeyCompetence,
+      selectedLearningSituation,
+      file,
+      comment,
+    );
   };
 
-  // NEXT STEP: SUBSELECTIONS, UPLOAD FILE+COMMENTS, HANDLE SUBMIT
+  // SUBMIT FORM
+  const handleSubmit = async (
+    e: React.SyntheticEvent<HTMLFormElement>,
+  ): Promise<void> => {
+    e.preventDefault();
+
+    if (file !== undefined) {
+      try {
+        const { error } = await supabase.storage
+          .from('learning_evidences')
+          .upload(userId + '/' + file.id, file.file);
+
+        if (error != null) throw new Error();
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    try {
+      const { error } = await supabase
+        .from('learning_evidence_collection')
+        .insert([
+          {
+            student: selectedStudent?.id,
+            learning_situation: selectedLearningSituation?.id,
+            subject_area: selectedSubjectArea,
+            key_competence: selectedKeyCompetence,
+            learning_evidence: file?.id,
+            made_by: userId,
+            comment,
+          },
+        ])
+        .select();
+      if (error != null) throw new Error();
+    } catch (error) {
+      console.log(error);
+    } finally {
+      resetData();
+      const modal = document.getElementById(
+        'ev-collection',
+      ) as HTMLDialogElement;
+      modal.close();
+      alert('Your learning evidence was successfully saved!');
+    }
+  };
+
   return (
     <>
       {/* Open the modal using document.getElementById('ID').showModal() method */}
@@ -49,21 +144,28 @@ const EvidenceCollectionForm = (): JSX.Element => {
             <span className='text-info'>evidence </span>
             <span className='text-accent'>collection</span>
           </h3>
+          <button
+            className='btn btn-sm btn-circle btn-ghost absolute right-2 top-2'
+            onClick={() => {
+              resetData();
+              const modal = document.getElementById(
+                'ev-collection',
+              ) as HTMLDialogElement;
+              modal.close();
+            }}
+          >
+            <img
+              className='h-5'
+              src='/assets/images/close-bold-svgrepo-com.svg'
+              alt='close-button'
+            />
+          </button>
           {/* FORM */}
           <form
             method='dialog'
             className='modal-action mt-0 space-y-4 flex-col justify-center items-center w-full'
+            onSubmit={handleSubmit}
           >
-            <button
-              className='btn btn-sm btn-circle btn-ghost absolute right-2 top-2'
-              onClick={resetData}
-            >
-              <img
-                className='h-5'
-                src='/assets/images/close-bold-svgrepo-com.svg'
-                alt='close-button'
-              />
-            </button>
             {/* STUDENT */}
             <div
               className='flex flex-col items-center w-full space-y-2 justify-evenly md:flex-row 
@@ -94,6 +196,7 @@ const EvidenceCollectionForm = (): JSX.Element => {
               <SearchStudent />
               {/* SUBMIT BUTTON DESKTOP */}
               <button
+                type='submit'
                 className='hidden md:block btn btn-sm btn-neutral border-2 border-primary text-primary 
                         hover:border-neutral hover:bg-transparent self-end'
               >
@@ -115,6 +218,7 @@ const EvidenceCollectionForm = (): JSX.Element => {
             </div>
             {/* SUBMIT BUTTON MOBILE */}
             <button
+              type='submit'
               className='btn btn-sm btn-neutral border-2 border-primary text-primary 
                         hover:border-neutral hover:bg-transparent self-end md:hidden'
             >

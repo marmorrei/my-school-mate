@@ -43,13 +43,15 @@ const LearningSituationSelect = (): JSX.Element => {
       item => item?.title === selectedLS,
     );
     setCompleteLS(completeLearningSituation);
-    console.log(completeLS);
   }, [selectedLS]);
 
   // UPDATE EvidenceCollectionForm DATA
   useEffect(() => {
-    updateLearningSituation(completeLS);
-  }, [selectedLS, completeLS]);
+    if (completeLS !== undefined) {
+      updateLearningSituation(completeLS);
+    }
+  }, [updateLearningSituation, completeLS]);
+
   return (
     <div className='shadow-md rounded w-full md:w-2/4 p-4'>
       <Select
@@ -78,7 +80,6 @@ const LearningSituationSelect = (): JSX.Element => {
         >
           {completeLS?.assessment_criteria}
         </p>
-        {/* </div> */}
       </div>
     </div>
   );

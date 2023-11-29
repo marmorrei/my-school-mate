@@ -9,6 +9,8 @@ import {
   type LearningSituationContextType,
   type KeyCompetenceType,
   type KeyCompetenceContextType,
+  type EvidenceContextType,
+  type FileType,
 } from '../types/types';
 
 // CREATE CONTEXTS
@@ -25,6 +27,10 @@ const LearningSituationContext = createContext<
 const KeyCompetenceContext = createContext<
   KeyCompetenceContextType | undefined
 >(undefined);
+
+const EvidenceContext = createContext<EvidenceContextType | undefined>(
+  undefined,
+);
 
 // CUSTOM HOOKS
 export const useStudentContext = (): StudentContextType => {
@@ -63,6 +69,15 @@ export const useKeyCompetenceContext = (): KeyCompetenceContextType => {
   return keyCompetenceContext;
 };
 
+export const useEvidenceContext = (): EvidenceContextType => {
+  const evidenceContext = useContext(EvidenceContext);
+  if (evidenceContext === undefined)
+    throw new Error(
+      'useEvidenceContext must be used within an EvidenceCollectionProvider',
+    );
+  return evidenceContext;
+};
+
 // CONTEXT PROVIDER
 export const EvidenceCollectionProvider = (props: Props): JSX.Element => {
   // useState
@@ -77,6 +92,9 @@ export const EvidenceCollectionProvider = (props: Props): JSX.Element => {
 
   const [selectedKeyCompetence, setSelectedKeyCompetence] =
     useState<KeyCompetenceType>(undefined);
+
+  const [file, setFile] = useState<FileType>(undefined);
+  const [comment, setComment] = useState<string | undefined>();
 
   // update states
   const updateStudent = (newStudent: StudentType): void => {
@@ -97,6 +115,14 @@ export const EvidenceCollectionProvider = (props: Props): JSX.Element => {
     setSelectedKeyCompetence(newKeyCompetence);
   };
 
+  const updateFile = (newFile: FileType): void => {
+    setFile(newFile);
+  };
+
+  const updateComment = (newComment: string | undefined): void => {
+    setComment(newComment);
+  };
+
   return (
     <StudentContext.Provider
       value={{ selectedStudent, updateStudent }}
@@ -113,7 +139,12 @@ export const EvidenceCollectionProvider = (props: Props): JSX.Element => {
           <KeyCompetenceContext.Provider
             value={{ selectedKeyCompetence, updateKeyCompetence }}
             {...props}
-          ></KeyCompetenceContext.Provider>
+          >
+            <EvidenceContext.Provider
+              value={{ file, updateFile, comment, updateComment }}
+              {...props}
+            ></EvidenceContext.Provider>
+          </KeyCompetenceContext.Provider>
         </LearningSituationContext.Provider>
       </SubjectAreaContext.Provider>
     </StudentContext.Provider>
