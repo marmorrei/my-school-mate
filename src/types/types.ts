@@ -70,7 +70,7 @@ export interface KeyCompetenceContextType {
 export type FileType =
   | {
       id: string;
-      file: File | undefined;
+      file: File;
     }
   | undefined;
 

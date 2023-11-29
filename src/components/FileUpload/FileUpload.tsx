@@ -1,13 +1,16 @@
-import { type ChangeEvent } from 'react';
+import { useState, type ChangeEvent } from 'react';
 import { useEvidenceContext } from '../../context/EvidenceCollectionProvider';
 import { v4 as uuidv4 } from 'uuid';
 
 const FileUpload = (): JSX.Element => {
   const { updateFile } = useEvidenceContext();
+  const [selectedFile, setSelectedFile] = useState<File | undefined>();
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
-    const selectedFile = e.target.files[0];
-    if (selectedFile !== null) {
+    if (e.target.files !== null) {
+      setSelectedFile(e.target.files[0]);
+    }
+    if (selectedFile !== undefined) {
       updateFile({ id: uuidv4(), file: selectedFile });
     }
   };

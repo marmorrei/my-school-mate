@@ -80,15 +80,18 @@ const EvidenceCollectionForm = (): JSX.Element => {
   ): Promise<void> => {
     e.preventDefault();
 
-    try {
-      const { error } = await supabase.storage
-        .from('learning_evidences')
-        .upload(userId + '/' + file?.id, file?.file);
+    if (file !== undefined) {
+      try {
+        const { error } = await supabase.storage
+          .from('learning_evidences')
+          .upload(userId + '/' + file.id, file.file);
 
-      if (error != null) throw new Error();
-    } catch (error) {
-      console.log(error);
+        if (error != null) throw new Error();
+      } catch (error) {
+        console.log(error);
+      }
     }
+
     try {
       const { error } = await supabase
         .from('learning_evidence_collection')
