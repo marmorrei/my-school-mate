@@ -41,6 +41,7 @@ export interface SubjectAreaContextType {
 
 export type LearningSituationType =
   | {
+      id: string;
       title: string;
       specific_competence: string;
       assessment_criteria: string;
@@ -65,6 +66,19 @@ export type KeyCompetenceType =
 export interface KeyCompetenceContextType {
   selectedKeyCompetence: KeyCompetenceType;
   updateKeyCompetence: (newKeyCompetence: KeyCompetenceType) => void;
+}
+export type FileType =
+  | {
+      id: string;
+      file: File | undefined;
+    }
+  | undefined;
+
+export interface EvidenceContextType {
+  file: FileType;
+  comment: string | undefined;
+  updateFile: (newFile: FileType) => void;
+  updateComment: (newComment: string | undefined) => void;
 }
 
 export type UserType = {
