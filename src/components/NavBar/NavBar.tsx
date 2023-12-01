@@ -18,20 +18,20 @@ const NavBar = (): JSX.Element => {
   // OBTAIN USER NAME
   const getUserName = async (): Promise<void> => {
     let userId: string = '';
-    try {
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
-      if (user !== null) {
-        userId = user.id;
+    if (isLogged) {
+      try {
+        const {
+          data: { user },
+        } = await supabase.auth.getUser();
+        if (user !== null) {
+          userId = user.id;
+        }
+        void fetchUserProfile(userId).then(result => {
+          setUserName(result[0].name);
+        });
+      } catch (error) {
+        console.log(error);
       }
-      void fetchUserProfile(userId).then(result => {
-        console.log(result);
-        setUserName(result[0].name);
-        console.log(userName);
-      });
-    } catch (error) {
-      console.log(error);
     }
   };
 

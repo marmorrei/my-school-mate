@@ -46,7 +46,7 @@ const EvidenceCollectionForm = (): JSX.Element => {
     }
   };
 
-  // RESET DATA ******probar a añadir un nuevo contexto booleano para resetear todos los componentes involucrados en este
+  // RESET DATA
   const resetData = (): void => {
     updateStudent(undefined);
     updateSubjectArea(undefined);
@@ -63,34 +63,57 @@ const EvidenceCollectionForm = (): JSX.Element => {
   ): Promise<void> => {
     e.preventDefault();
 
-    if (file !== undefined) {
-      try {
-        const { error } = await supabase.storage
-          .from('learning_evidences')
-          .upload(userId + '/' + file.id, file.file);
+    // FINAL DATA CHECKS BEFORE SUBMIT
+    const student =
+      selectedStudent?.id !== undefined ? selectedStudent.id : null;
 
-        if (error != null) throw new Error();
-      } catch (error) {
-        console.log(error);
-      }
-    }
+    const learning_situation =
+      selectedLearningSituation?.id !== ''
+        ? selectedLearningSituation?.id
+        : null;
 
+    const subject_area =
+      selectedSubjectArea?.name !== '' ? selectedSubjectArea : null;
+
+    const key_competence =
+      selectedKeyCompetence?.name !== '' ? selectedKeyCompetence : null;
+
+    const learning_evidence = file?.id !== undefined ? file.id : null;
+
+    // submit form
     try {
       const { error } = await supabase
         .from('learning_evidence_collection')
         .insert([
           {
-            student: selectedStudent?.id,
-            learning_situation: selectedLearningSituation?.id,
-            subject_area: selectedSubjectArea,
-            key_competence: selectedKeyCompetence,
-            learning_evidence: file?.id,
+            student,
+            learning_situation,
+            subject_area,
+            key_competence,
+            learning_evidence,
             made_by: userId,
             comment,
           },
         ])
         .select();
-      if (error != null) throw new Error();
+
+      if (error != null) {
+        if (
+          error.message.includes(
+            'null value in column "student" of relation "learning_evidence_collection" violates not-null constraint',
+          )
+        ) {
+          alert('Student REQUIRED');
+        } else {
+          throw new Error(
+            `Error submitting learning evidence form: ${error.message}`,
+          );
+        }
+      } else {
+        // if no errors submitting, submit file
+        void submitFile();
+        alert('Your learning evidence was successfully saved!');
+      }
     } catch (error) {
       console.log(error);
     } finally {
@@ -99,17 +122,20 @@ const EvidenceCollectionForm = (): JSX.Element => {
         'ev-collection',
       ) as HTMLDialogElement;
       modal.close();
+    }
+  };
 
-      alert('Your learning evidence was successfully saved!');
-      console.log(
-        'After submit:',
-        selectedStudent,
-        selectedSubjectArea,
-        selectedKeyCompetence,
-        selectedLearningSituation,
-        file,
-        comment,
-      );
+  const submitFile = async (): Promise<void> => {
+    if (file !== undefined) {
+      try {
+        const { error } = await supabase.storage
+          .from('learning_evidences')
+          .upload(userId + '/' + file.id, file.file);
+        if (error != null)
+          throw new Error(`Error uploading file: ${error.message}`);
+      } catch (error) {
+        console.log(error);
+      }
     }
   };
 
@@ -124,15 +150,6 @@ const EvidenceCollectionForm = (): JSX.Element => {
             document?.getElementById('ev-collection') as HTMLFormElement
           ).showModal();
           setIsSubmitted(false);
-          console.log(
-            'After opening modal:',
-            selectedStudent,
-            selectedSubjectArea,
-            selectedKeyCompetence,
-            selectedLearningSituation,
-            file,
-            comment,
-          );
         }}
       >
         Learning evidence
@@ -155,15 +172,6 @@ const EvidenceCollectionForm = (): JSX.Element => {
                 'ev-collection',
               ) as HTMLDialogElement;
               modal.close();
-              console.log(
-                'After close:',
-                selectedStudent,
-                selectedSubjectArea,
-                selectedKeyCompetence,
-                selectedLearningSituation,
-                file,
-                comment,
-              );
             }}
           >
             <img
@@ -193,16 +201,20 @@ const EvidenceCollectionForm = (): JSX.Element => {
                   </div>
                 </div>
                 <div className='name-course flex flex-col'>
-                  <p className='text-primary text-xs font-bold'>
-                    {selectedStudent !== undefined
-                      ? `${selectedStudent.name} ${selectedStudent.surname}`
-                      : ''}
-                  </p>
-                  <p className='text-primary text-xs font-bold'>
-                    {selectedStudent !== undefined
-                      ? `Primary ${selectedStudent.course}`
-                      : ''}
-                  </p>
+                  {selectedStudent !== undefined ? (
+                    <>
+                      <p className='text-primary text-xs font-bold'>
+                        {selectedStudent.name} {selectedStudent.surname}
+                      </p>
+                      <p className='text-primary text-xs font-bold'>
+                        Primary {selectedStudent.course}
+                      </p>
+                    </>
+                  ) : (
+                    <p className='text-primary text-xs font-bold p-2 bg-secondary/20 rounded-md'>
+                      Choosing a student is required
+                    </p>
+                  )}
                 </div>
               </div>
               <SearchStudent />

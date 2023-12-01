@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom';
+
 const Home = (): JSX.Element => {
   return (
     <main className="flex flex-col space-y-28 lg:space-y-6 py-14 lg:py-4 bg-cover bg-no-repeat bg-center bg-[url('/assets/images/bg-spiral.svg')] ">
@@ -18,12 +20,14 @@ const Home = (): JSX.Element => {
               The solution for teachers to manage their daily routines in an
               simple way and focus on what really matters
             </p>
-            <button
-              className='btn btn-sm btn-info border-2 border-primary text-primary 
-                          hover:border-info hover:bg-transparent w-max self-center lg:self-start'
-            >
-              See details
-            </button>
+            <NavLink to='/dashboard' className='self-center lg:self-start'>
+              <button
+                className='btn btn-sm btn-info border-2 border-primary text-primary 
+                            hover:border-info hover:bg-transparent w-max'
+              >
+                See details
+              </button>
+            </NavLink>
           </div>
         </div>
       </div>
@@ -44,12 +48,14 @@ const Home = (): JSX.Element => {
               Efficient communication between the school and the families has
               never been easier.
             </p>
-            <button
-              className='btn btn-sm btn-info border-2 border-primary text-primary 
-                          hover:border-info hover:bg-transparent w-max self-center lg:self-start'
-            >
-              More info
-            </button>
+            <NavLink to='/dashboard' className='self-center lg:self-start'>
+              <button
+                className='btn btn-sm btn-info border-2 border-primary text-primary 
+                            hover:border-info hover:bg-transparent w-max'
+              >
+                More info
+              </button>
+            </NavLink>
           </div>
         </div>
       </div>
@@ -68,12 +74,14 @@ const Home = (): JSX.Element => {
             <p className='pt-14 pb-8 text-secondary text-md font-bold self-center lg:self-start'>
               User friendly UI to access to My School Mate in all your devices
             </p>
-            <button
-              className='btn btn-sm btn-info border-2 border-primary text-primary 
-                          hover:border-info hover:bg-transparent w-max self-center lg:self-start'
-            >
-              See demo
-            </button>
+            <NavLink to='/dashboard' className='self-center lg:self-start'>
+              <button
+                className='btn btn-sm btn-info border-2 border-primary text-primary 
+                            hover:border-info hover:bg-transparent w-max'
+              >
+                See demo
+              </button>
+            </NavLink>
           </div>
         </div>
       </div>

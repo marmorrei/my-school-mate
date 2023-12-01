@@ -1,4 +1,4 @@
-import { useState, type ChangeEvent, useEffect, useRef } from 'react';
+import { useEffect, type ChangeEvent, useRef } from 'react';
 import {
   useEvidenceContext,
   useSubmitContext,
@@ -7,25 +7,24 @@ import { v4 as uuidv4 } from 'uuid';
 
 const FileUpload = (): JSX.Element => {
   const { updateFile } = useEvidenceContext();
-  const [selectedFile, setSelectedFile] = useState<File | undefined>();
   const { isSubmitted } = useSubmitContext();
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  // RESET DATA
   useEffect(() => {
-    setSelectedFile(undefined);
-    updateFile(undefined);
+    if (!isSubmitted) {
+      updateFile(undefined);
 
-    if (fileInputRef.current != null) {
-      fileInputRef.current.value = '';
+      if (fileInputRef.current != null) {
+        fileInputRef.current.value = '';
+      }
     }
   }, [isSubmitted]);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
-    if (e.target.files !== null) {
-      setSelectedFile(e.target.files[0]);
-    }
-    if (selectedFile !== undefined) {
-      updateFile({ id: uuidv4(), file: selectedFile });
+    if (e.target.files?.[0] != null) {
+      const newFile = e.target.files[0];
+      updateFile({ id: uuidv4(), file: newFile });
     }
   };
 

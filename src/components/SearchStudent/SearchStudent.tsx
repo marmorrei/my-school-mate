@@ -68,8 +68,9 @@ const SearchStudent = (): JSX.Element => {
   ));
 
   return (
-    <div className='flex flex-col items-center w-full m-0 space-y-1.5 md:w-2/4'>
+    <div className='dropdown flex flex-col items-center w-full m-0 space-y-1.5 md:w-2/4'>
       <input
+        tabIndex={0}
         type='search'
         placeholder='Search student (required)'
         value={input}
@@ -78,8 +79,11 @@ const SearchStudent = (): JSX.Element => {
         }}
         className='input border-none input-primary input-sm bg-neutral/20 w-full text-primary max-w-xs'
       />
-      {results !== undefined && (
-        <div className='bg-neutral/20 w-full text-secondary cursor-default rounded-md overflow-y-scroll md:w-4/5 lg:w-2/3'>
+      {results !== undefined && input !== '' && (
+        <div
+          tabIndex={0}
+          className='dropdown-content top-6 z-[1] bg-[#F2F7F8] w-full text-secondary cursor-default rounded-md overflow-y-scroll md:w-4/5 lg:w-2/3'
+        >
           {displayResults}
         </div>
       )}
