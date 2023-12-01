@@ -201,16 +201,20 @@ const EvidenceCollectionForm = (): JSX.Element => {
                   </div>
                 </div>
                 <div className='name-course flex flex-col'>
-                  <p className='text-primary text-xs font-bold'>
-                    {selectedStudent !== undefined
-                      ? `${selectedStudent.name} ${selectedStudent.surname}`
-                      : ''}
-                  </p>
-                  <p className='text-primary text-xs font-bold'>
-                    {selectedStudent !== undefined
-                      ? `Primary ${selectedStudent.course}`
-                      : ''}
-                  </p>
+                  {selectedStudent !== undefined ? (
+                    <>
+                      <p className='text-primary text-xs font-bold'>
+                        {selectedStudent.name} {selectedStudent.surname}
+                      </p>
+                      <p className='text-primary text-xs font-bold'>
+                        Primary {selectedStudent.course}
+                      </p>
+                    </>
+                  ) : (
+                    <p className='text-primary text-xs font-bold p-2 bg-secondary/20 rounded-md'>
+                      Choosing a student is required
+                    </p>
+                  )}
                 </div>
               </div>
               <SearchStudent />
