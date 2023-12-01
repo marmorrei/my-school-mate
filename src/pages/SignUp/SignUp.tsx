@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { supabase } from '../../supabase/supabase';
 import { useState } from 'react';
 
@@ -9,6 +9,8 @@ const SignUp = (): JSX.Element => {
     email: '',
     password: '',
   });
+
+  const navigate = useNavigate();
 
   const resetData = (): void => {
     setFormData({
@@ -66,6 +68,7 @@ const SignUp = (): JSX.Element => {
     } finally {
       resetData();
     }
+    navigate('/dashboard');
   };
 
   return (

@@ -5,7 +5,10 @@ import {
 } from '../../types/types';
 import Select from '../Select/Select';
 import { fetchLearningSituations } from '../../utils/api/fetchLearningSituations';
-import { useLearningSituationContext } from '../../context/EvidenceCollectionProvider';
+import {
+  useLearningSituationContext,
+  useSubmitContext,
+} from '../../context/EvidenceCollectionProvider';
 
 const LearningSituationSelect = (): JSX.Element => {
   const { updateLearningSituation } = useLearningSituationContext();
@@ -21,6 +24,21 @@ const LearningSituationSelect = (): JSX.Element => {
     LearningSituationType | undefined
   >(undefined);
 
+  const { isSubmitted } = useSubmitContext();
+
+  useEffect(() => {
+    setLearningSituations(undefined);
+    setLearningSituationsList(['']);
+    setSelectedLS('');
+    setCompleteLS({
+      id: '',
+      title: '',
+      specific_competence: '',
+      assessment_criteria: '',
+    });
+    updateLearningSituation(undefined);
+  }, [isSubmitted]);
+
   // OBTAIN LEARNING SITUATIONS FROM DATABASE
   useEffect(() => {
     fetchLearningSituations()
@@ -35,7 +53,7 @@ const LearningSituationSelect = (): JSX.Element => {
       .catch(error => {
         console.log(error);
       });
-  }, []);
+  }, [isSubmitted]);
 
   // EXTRACT COMPETENCE & CRITERIA OF SELECTED LEARNING SITUATION
   useEffect(() => {

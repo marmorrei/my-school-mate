@@ -2,7 +2,10 @@ import { useState, useEffect } from 'react';
 import Select from '../Select/Select';
 import { type OptionsType } from '../../types/types';
 import curriculum from '../../data/primary-catalan-curriculum.json';
-import { useSubjectAreaContext } from '../../context/EvidenceCollectionProvider';
+import {
+  useSubjectAreaContext,
+  useSubmitContext,
+} from '../../context/EvidenceCollectionProvider';
 
 const SubjectArea = (): JSX.Element => {
   const { updateSubjectArea } = useSubjectAreaContext();
@@ -18,13 +21,24 @@ const SubjectArea = (): JSX.Element => {
   const [selectedSC, setSelectedSC] = useState('');
   const [selectedAC, setSelectedAC] = useState('');
 
+  const { isSubmitted } = useSubmitContext();
+
+  useEffect(() => {
+    setSpecificCompetencesList(['']);
+    setAssessmentCriteriaList(['']);
+    setSelectedSA('');
+    setSelectedSC('');
+    setSelectedAC('');
+    updateSubjectArea(undefined);
+  }, [isSubmitted]);
+
   // EXTRACT LIST OF SUBJECT AREAS
   useEffect(() => {
     const subjectsList = curriculum['cycle-1']['subject-areas'].map(
       item => item.name,
     );
     setSubjectAreaList(subjectsList);
-  }, []);
+  }, [isSubmitted]);
 
   // EXTRACT LIST OF SPECIFIC COMPETENCES DEPENDING ON THE SUBJECT SELECTED
   useEffect(() => {

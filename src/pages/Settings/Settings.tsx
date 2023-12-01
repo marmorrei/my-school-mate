@@ -1,4 +1,4 @@
-import SiteUnderConstruction from '../SiteUnderConstruction/SiteUnderConstruction';
+import SiteUnderConstruction from '../../components/SiteUnderConstruction/SiteUnderConstruction';
 
 const Settings = (): JSX.Element => {
   return <SiteUnderConstruction />;

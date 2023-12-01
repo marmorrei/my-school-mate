@@ -7,6 +7,7 @@ import {
   useLearningSituationContext,
   useStudentContext,
   useSubjectAreaContext,
+  useSubmitContext,
 } from '../../context/EvidenceCollectionProvider';
 import SubjectArea from '../SubjectAreaSelect/SubjectArea';
 import KeyCompetence from '../KeyCompetenceSelect/KeyCompetence';
@@ -22,6 +23,7 @@ const EvidenceCollectionForm = (): JSX.Element => {
   const { selectedLearningSituation, updateLearningSituation } =
     useLearningSituationContext();
   const { file, updateFile, comment, updateComment } = useEvidenceContext();
+  const { setIsSubmitted } = useSubmitContext();
   const [userId, setUserId] = useState('');
 
   useEffect(() => {
@@ -44,34 +46,15 @@ const EvidenceCollectionForm = (): JSX.Element => {
     }
   };
 
-  // RESET DATA
+  // RESET DATA ******probar a añadir un nuevo contexto booleano para resetear todos los componentes involucrados en este
   const resetData = (): void => {
-    console.log(
-      'Before reset:',
-      selectedStudent,
-      selectedSubjectArea,
-      selectedKeyCompetence,
-      selectedLearningSituation,
-      file,
-      comment,
-    );
-
     updateStudent(undefined);
     updateSubjectArea(undefined);
-    updateKeyCompetence(undefined);
     updateLearningSituation(undefined);
+    updateKeyCompetence(undefined);
     updateFile(undefined);
     updateComment(undefined);
-
-    console.log(
-      'After reset:',
-      selectedStudent,
-      selectedSubjectArea,
-      selectedKeyCompetence,
-      selectedLearningSituation,
-      file,
-      comment,
-    );
+    setIsSubmitted(true);
   };
 
   // SUBMIT FORM
@@ -116,7 +99,17 @@ const EvidenceCollectionForm = (): JSX.Element => {
         'ev-collection',
       ) as HTMLDialogElement;
       modal.close();
+
       alert('Your learning evidence was successfully saved!');
+      console.log(
+        'After submit:',
+        selectedStudent,
+        selectedSubjectArea,
+        selectedKeyCompetence,
+        selectedLearningSituation,
+        file,
+        comment,
+      );
     }
   };
 
@@ -126,11 +119,21 @@ const EvidenceCollectionForm = (): JSX.Element => {
       <button
         className='btn btn-sm btn-info border-2 border-primary text-primary hover:border-info 
         hover:bg-transparent'
-        onClick={() =>
+        onClick={() => {
           (
             document?.getElementById('ev-collection') as HTMLFormElement
-          ).showModal()
-        }
+          ).showModal();
+          setIsSubmitted(false);
+          console.log(
+            'After opening modal:',
+            selectedStudent,
+            selectedSubjectArea,
+            selectedKeyCompetence,
+            selectedLearningSituation,
+            file,
+            comment,
+          );
+        }}
       >
         Learning evidence
       </button>
@@ -152,6 +155,15 @@ const EvidenceCollectionForm = (): JSX.Element => {
                 'ev-collection',
               ) as HTMLDialogElement;
               modal.close();
+              console.log(
+                'After close:',
+                selectedStudent,
+                selectedSubjectArea,
+                selectedKeyCompetence,
+                selectedLearningSituation,
+                file,
+                comment,
+              );
             }}
           >
             <img

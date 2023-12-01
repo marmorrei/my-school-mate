@@ -1,11 +1,21 @@
-import { useEvidenceContext } from '../../context/EvidenceCollectionProvider';
+import { useEffect } from 'react';
+import {
+  useEvidenceContext,
+  useSubmitContext,
+} from '../../context/EvidenceCollectionProvider';
 
 const Comments = (): JSX.Element => {
   const { comment, updateComment } = useEvidenceContext();
+  const { isSubmitted } = useSubmitContext();
+
+  useEffect(() => {
+    updateComment('');
+  }, [isSubmitted]);
 
   const handleChange = (value: string): void => {
     updateComment(value);
   };
+
   return (
     <div className='pt-2 border-t-2 border-primary/20'>
       <textarea
