@@ -98,22 +98,20 @@ const EvidenceCollectionForm = (): JSX.Element => {
         .select();
 
       if (error != null) {
-        throw new Error(
-          `Error submitting learning evidence form: ${error.message}`,
-        );
-      } else {
-        if (file !== undefined) {
-          // if no errors submitting, submit file
-          try {
-            const { error } = await supabase.storage
-              .from('learning_evidences')
-              .upload(userId + '/' + file.id, file.file);
-            if (error != null)
-              throw new Error(`Error uploading file: ${error.message}`);
-          } catch (error) {
-            console.log(error);
-          }
+        if (
+          error.message.includes(
+            'null value in column "student" of relation "learning_evidence_collection" violates not-null constraint',
+          )
+        ) {
+          alert('Student REQUIRED');
+        } else {
+          throw new Error(
+            `Error submitting learning evidence form: ${error.message}`,
+          );
         }
+      } else {
+        // if no errors submitting, submit file
+        void submitFile();
         alert('Your learning evidence was successfully saved!');
       }
     } catch (error) {
@@ -124,6 +122,20 @@ const EvidenceCollectionForm = (): JSX.Element => {
         'ev-collection',
       ) as HTMLDialogElement;
       modal.close();
+    }
+  };
+
+  const submitFile = async (): Promise<void> => {
+    if (file !== undefined) {
+      try {
+        const { error } = await supabase.storage
+          .from('learning_evidences')
+          .upload(userId + '/' + file.id, file.file);
+        if (error != null)
+          throw new Error(`Error uploading file: ${error.message}`);
+      } catch (error) {
+        console.log(error);
+      }
     }
   };
 
