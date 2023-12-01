@@ -11,6 +11,7 @@ import {
   type KeyCompetenceContextType,
   type EvidenceContextType,
   type FileType,
+  type SubmitContextType,
 } from '../types/types';
 
 // CREATE CONTEXTS
@@ -31,6 +32,8 @@ const KeyCompetenceContext = createContext<
 const EvidenceContext = createContext<EvidenceContextType | undefined>(
   undefined,
 );
+
+const SubmitContext = createContext<SubmitContextType | undefined>(undefined);
 
 // CUSTOM HOOKS
 export const useStudentContext = (): StudentContextType => {
@@ -78,6 +81,15 @@ export const useEvidenceContext = (): EvidenceContextType => {
   return evidenceContext;
 };
 
+export const useSubmitContext = (): SubmitContextType => {
+  const submitContext = useContext(SubmitContext);
+  if (submitContext === undefined)
+    throw new Error(
+      'useSubmitContext must be used within an EvidenceCollectionProvider',
+    );
+  return submitContext;
+};
+
 // CONTEXT PROVIDER
 export const EvidenceCollectionProvider = (props: Props): JSX.Element => {
   // useState
@@ -95,6 +107,8 @@ export const EvidenceCollectionProvider = (props: Props): JSX.Element => {
 
   const [file, setFile] = useState<FileType>(undefined);
   const [comment, setComment] = useState<string | undefined>();
+
+  const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
 
   // update states
   const updateStudent = (newStudent: StudentType): void => {
@@ -143,7 +157,12 @@ export const EvidenceCollectionProvider = (props: Props): JSX.Element => {
             <EvidenceContext.Provider
               value={{ file, updateFile, comment, updateComment }}
               {...props}
-            ></EvidenceContext.Provider>
+            >
+              <SubmitContext.Provider
+                value={{ isSubmitted, setIsSubmitted }}
+                {...props}
+              ></SubmitContext.Provider>
+            </EvidenceContext.Provider>
           </KeyCompetenceContext.Provider>
         </LearningSituationContext.Provider>
       </SubjectAreaContext.Provider>

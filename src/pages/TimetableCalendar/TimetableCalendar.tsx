@@ -1,4 +1,4 @@
-import SiteUnderConstruction from '../SiteUnderConstruction/SiteUnderConstruction';
+import SiteUnderConstruction from '../../components/SiteUnderConstruction/SiteUnderConstruction';
 
 const TimetableCalendar = (): JSX.Element => {
   return <SiteUnderConstruction />;

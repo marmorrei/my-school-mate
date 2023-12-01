@@ -81,6 +81,11 @@ export interface EvidenceContextType {
   updateComment: (newComment: string | undefined) => void;
 }
 
+export interface SubmitContextType {
+  isSubmitted: boolean;
+  setIsSubmitted: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
 export type UserType = {
   user_id: string | undefined;
   name: string;

@@ -1,4 +1,4 @@
-import EvidenceCollectionForm from '../EvidenceCollectionForm/EvidenceCollectionForm';
+import EvidenceCollectionForm from '../../components/EvidenceCollectionForm/EvidenceCollectionForm';
 
 const Dashboard = (): JSX.Element => {
   return (

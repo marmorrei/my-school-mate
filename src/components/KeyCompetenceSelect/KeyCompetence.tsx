@@ -2,7 +2,10 @@ import { useState, useEffect } from 'react';
 import { type OptionsType } from '../../types/types';
 import Select from '../Select/Select';
 import curriculum from '../../data/primary-catalan-curriculum.json';
-import { useKeyCompetenceContext } from '../../context/EvidenceCollectionProvider';
+import {
+  useKeyCompetenceContext,
+  useSubmitContext,
+} from '../../context/EvidenceCollectionProvider';
 
 const KeyCompetence = (): JSX.Element => {
   const { updateKeyCompetence } = useKeyCompetenceContext();
@@ -20,13 +23,24 @@ const KeyCompetence = (): JSX.Element => {
   const [selectedSC, setSelectedSC] = useState('');
   const [selectedAC, setSelectedAC] = useState('');
 
+  const { isSubmitted } = useSubmitContext();
+
+  useEffect(() => {
+    setSpecificCompetencesList(['']);
+    setAssessmentCriteriaList(['']);
+    setSelectedKC('');
+    setSelectedSC('');
+    setSelectedAC('');
+    updateKeyCompetence(undefined);
+  }, [isSubmitted]);
+
   // EXTRACT LIST OF KEY COMPETENCES
   useEffect(() => {
     const keyCompList = curriculum['cycle-1']['key-competences'].map(
       item => item.name,
     );
     setKeyCompetencesList(keyCompList);
-  }, []);
+  }, [isSubmitted]);
 
   // EXTRACT LIST OF SPECIFIC COMPETENCES DEPENDING ON THE KC SELECTED
   useEffect(() => {

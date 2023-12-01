@@ -1,21 +1,32 @@
-import { useState } from 'react';
-import { useStudentContext } from '../../context/EvidenceCollectionProvider';
+import { useEffect, useState } from 'react';
+import {
+  useStudentContext,
+  useSubmitContext,
+} from '../../context/EvidenceCollectionProvider';
 import { fetchStudents } from '../../utils/api/fetchStudents';
 
 const SearchStudent = (): JSX.Element => {
   const { updateStudent } = useStudentContext();
   const [input, setInput] = useState('');
   const [results, setResults] = useState<
-    [
-      {
-        id: string;
-        name: string;
-        surname: string;
-        course: string;
-        cycle: number;
-      },
-    ]
-  >();
+    | [
+        {
+          id: string;
+          name: string;
+          surname: string;
+          course: string;
+          cycle: number;
+        },
+      ]
+    | undefined
+  >(undefined);
+  const { isSubmitted } = useSubmitContext();
+
+  useEffect(() => {
+    setInput('');
+    setResults(undefined);
+    updateStudent(undefined);
+  }, [isSubmitted]);
 
   const handleChange = (value: string): void => {
     setInput(value);
@@ -60,7 +71,7 @@ const SearchStudent = (): JSX.Element => {
     <div className='flex flex-col items-center w-full m-0 space-y-1.5 md:w-2/4'>
       <input
         type='search'
-        placeholder='Search student'
+        placeholder='Search student (required)'
         value={input}
         onChange={e => {
           handleChange(e.target.value);

@@ -1,10 +1,24 @@
-import { useState, type ChangeEvent } from 'react';
-import { useEvidenceContext } from '../../context/EvidenceCollectionProvider';
+import { useState, type ChangeEvent, useEffect, useRef } from 'react';
+import {
+  useEvidenceContext,
+  useSubmitContext,
+} from '../../context/EvidenceCollectionProvider';
 import { v4 as uuidv4 } from 'uuid';
 
 const FileUpload = (): JSX.Element => {
   const { updateFile } = useEvidenceContext();
   const [selectedFile, setSelectedFile] = useState<File | undefined>();
+  const { isSubmitted } = useSubmitContext();
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    setSelectedFile(undefined);
+    updateFile(undefined);
+
+    if (fileInputRef.current != null) {
+      fileInputRef.current.value = '';
+    }
+  }, [isSubmitted]);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
     if (e.target.files !== null) {
@@ -24,6 +38,7 @@ const FileUpload = (): JSX.Element => {
         id='my-file'
         type='file'
         name='file'
+        ref={fileInputRef}
         onChange={e => {
           handleChange(e);
         }}
