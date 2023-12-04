@@ -8,10 +8,9 @@ const Dashboard = (): JSX.Element => {
   };
   return (
     <main className='w-auto p-4 flex flex-col space-y-3 md:flex-row md:space-x-3 md:space-y-0'>
-      <div className='hidden md:block'>
+      <div className='hidden md:block' onClick={handleClick} role='button'>
         <img
           className='opacity-30'
-          onClick={handleClick}
           src='/assets/images/today.svg'
           alt='today'
         />
@@ -21,32 +20,36 @@ const Dashboard = (): JSX.Element => {
           <p className='text-lg text-accent font-bold'>New functionality</p>
           <EvidenceCollectionForm />
         </div>
-        <img
-          className='opacity-30'
-          onClick={handleClick}
-          src='/assets/images/messages.svg'
-          alt='messages'
-        />
-        <img
-          className='opacity-30'
-          onClick={handleClick}
-          src='/assets/images/community.svg'
-          alt='community'
-        />
+        <div onClick={handleClick} role='button'>
+          <img
+            className='opacity-30'
+            src='/assets/images/messages.svg'
+            alt='messages'
+          />
+        </div>
+        <div onClick={handleClick} role='button'>
+          <img
+            className='opacity-30'
+            src='/assets/images/community.svg'
+            alt='community'
+          />
+        </div>
       </div>
       <div className='space-y-3'>
-        <img
-          className='opacity-30'
-          onClick={handleClick}
-          src='/assets/images/notes.svg'
-          alt='notes'
-        />
-        <img
-          className='opacity-30'
-          onClick={handleClick}
-          src='/assets/images/calendar.svg'
-          alt='calendar'
-        />
+        <div onClick={handleClick} role='button'>
+          <img
+            className='opacity-30'
+            src='/assets/images/notes.svg'
+            alt='notes'
+          />
+        </div>
+        <div onClick={handleClick} role='button'>
+          <img
+            className='opacity-30'
+            src='/assets/images/calendar.svg'
+            alt='calendar'
+          />
+        </div>
       </div>
     </main>
   );
