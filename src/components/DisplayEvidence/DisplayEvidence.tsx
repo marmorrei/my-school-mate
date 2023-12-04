@@ -173,12 +173,16 @@ const DisplayEvidence = ({
                     )}
                     {file.file.type.includes('video') && (
                       <div>
-                        <video src={fileUrl} autoPlay preload='none' />
+                        <video src={fileUrl} autoPlay preload='none'>
+                          <track kind='captions' />
+                        </video>
                       </div>
                     )}
                     {file.file.type.includes('audio') && (
                       <div>
-                        <audio src={fileUrl} autoPlay preload='none' />
+                        <audio src={fileUrl} autoPlay preload='none'>
+                          <track kind='captions' />
+                        </audio>
                       </div>
                     )}
                   </div>
