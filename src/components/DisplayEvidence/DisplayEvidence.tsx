@@ -51,9 +51,9 @@ const DisplayEvidence = ({
   };
 
   return (
-    <div className='fixed top-0 left-0 bg-neutral-400/30 w-screen h-screen flex justify-center items-center'>
+    <div className='fixed top-0 left-0 z-[1] bg-neutral-400/30 w-screen h-screen flex justify-center items-center'>
       <dialog
-        className='modal-box flex flex-col w-11/12 max-w-5xl h-auto border-none 
+        className='modal-box bg-white flex flex-col w-11/12 max-w-5xl h-auto border-none 
                       rounded-lg overscroll-auto shadow-xl'
       >
         <h3 className='font-bold text-lg'>
