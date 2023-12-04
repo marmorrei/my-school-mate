@@ -103,3 +103,18 @@ export interface LoginContextType {
 }
 
 export type OptionsType = string[] | undefined;
+
+export interface DisplayEvidenceProps {
+  userId: string;
+  filePath: string | undefined;
+  resetData: () => void;
+  setDisplayEvidence: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export interface InfoEvidenceProps {
+  id: string;
+  label: string;
+  content: string | undefined;
+  specificCompetence: string | undefined;
+  assessmentCriteria: string | undefined;
+}

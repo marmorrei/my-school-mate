@@ -14,6 +14,7 @@ import KeyCompetence from '../KeyCompetenceSelect/KeyCompetence';
 import LearningSituationSelect from '../LearningSituationSelect/LearningSituationSelect';
 import { supabase } from '../../supabase/supabase';
 import { useEffect, useState } from 'react';
+import DisplayEvidence from '../DisplayEvidence/DisplayEvidence';
 
 const EvidenceCollectionForm = (): JSX.Element => {
   const { selectedStudent, updateStudent } = useStudentContext();
@@ -25,6 +26,8 @@ const EvidenceCollectionForm = (): JSX.Element => {
   const { file, updateFile, comment, updateComment } = useEvidenceContext();
   const { setIsSubmitted } = useSubmitContext();
   const [userId, setUserId] = useState('');
+  const [displayEvidence, setDisplayEvidence] = useState<boolean>(false);
+  const [filePath, setFilePath] = useState<string | undefined>();
 
   useEffect(() => {
     void getUser();
@@ -112,12 +115,11 @@ const EvidenceCollectionForm = (): JSX.Element => {
       } else {
         // if no errors submitting, submit file
         void submitFile();
-        alert('Your learning evidence was successfully saved!');
+        setDisplayEvidence(true);
       }
     } catch (error) {
       console.log(error);
     } finally {
-      resetData();
       const modal = document.getElementById(
         'ev-collection',
       ) as HTMLDialogElement;
@@ -128,9 +130,12 @@ const EvidenceCollectionForm = (): JSX.Element => {
   const submitFile = async (): Promise<void> => {
     if (file !== undefined) {
       try {
-        const { error } = await supabase.storage
+        const { data, error } = await supabase.storage
           .from('learning_evidences')
           .upload(userId + '/' + file.id, file.file);
+        if (data != null) {
+          setFilePath(data.path);
+        }
         if (error != null)
           throw new Error(`Error uploading file: ${error.message}`);
       } catch (error) {
@@ -251,6 +256,14 @@ const EvidenceCollectionForm = (): JSX.Element => {
           </form>
         </div>
       </dialog>
+      {displayEvidence && (
+        <DisplayEvidence
+          userId={userId}
+          filePath={filePath}
+          resetData={resetData}
+          setDisplayEvidence={setDisplayEvidence}
+        />
+      )}
     </>
   );
 };
