@@ -25,14 +25,14 @@ const DisplayEvidence = ({
 
   useEffect(() => {
     if (filePath !== undefined) {
-      void getImage();
+      void getFile();
     }
   }, [filePath]);
 
-  const getImage = async (): Promise<void> => {
+  const getFile = async (): Promise<void> => {
     const { data, error } = await supabase.storage
       .from('learning_evidences')
-      .list('dde5172d-9576-4f53-bbdb-b2220233ff80/', {
+      .list(`${userId}/`, {
         limit: 100,
         offset: 0,
         sortBy: { column: 'name', order: 'asc' },
@@ -40,7 +40,6 @@ const DisplayEvidence = ({
       });
 
     if (data !== null) {
-      console.log(data);
       setFileUrl(
         'https://dcqfrgkkvuxhvtjiagvy.supabase.co/storage/v1/object/public/learning_evidences/' +
           userId +
