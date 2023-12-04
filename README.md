@@ -95,8 +95,8 @@ This is an ongoing project with the aim to make a powerfull tool for teachers, i
 ---
 
 - Testing user:
-  - email: test@email.com
-  - password: 123456
+  - email: testuser@email.com
+  - password: 123456789
 
 [Link to Demo](https://my-school-mate.vercel.app/)
 
